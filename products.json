@@ -1,0 +1,158 @@
+{
+  "store": "TechZone BD",
+  "version": "1.0",
+  "exported": "2025-01-01T00:00:00.000Z",
+  "total": 15,
+  "products": [
+    {
+      "id": "prod_001",
+      "name": "Redragon K552 Kumara TKL",
+      "price": 2499,
+      "category": "Keyboard",
+      "description": "Compact tenkeyless mechanical keyboard with Outemu Blue switches and red LED backlight. Durable metal plate construction.",
+      "image_url": "https://m.media-amazon.com/images/I/71bIBSQkBFL._AC_SX355_.jpg",
+      "badge": "HOT",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_002",
+      "name": "Logitech G102 Lightsync",
+      "price": 1850,
+      "category": "Mouse",
+      "description": "8000 DPI optical sensor. 6 programmable buttons. 16.8M color RGB. Ambidextrous design. Ultra-light 85g.",
+      "image_url": "https://resource.logitech.com/content/dam/gaming/en/products/g102/g102-gallery-1.png",
+      "badge": "BESTSELLER",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_003",
+      "name": "Fantech HG20 RGB Headset",
+      "price": 2200,
+      "category": "Headset",
+      "description": "Surround sound gaming headset. Omnidirectional microphone. Soft memory foam ear cushions. USB + 3.5mm dual mode.",
+      "image_url": "https://m.media-amazon.com/images/I/61mPYsBdmhL._AC_SX355_.jpg",
+      "badge": "NEW",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_004",
+      "name": "Havit HV-KB395L Low Profile",
+      "price": 3100,
+      "category": "Keyboard",
+      "description": "Ultra-slim low-profile mechanical switches. Full-size layout. Quiet typing experience. Per-key RGB backlight.",
+      "image_url": "https://m.media-amazon.com/images/I/61F3Y0ODZWL._AC_SX355_.jpg",
+      "badge": "",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_005",
+      "name": "A4Tech Bloody A70 Neon",
+      "price": 2750,
+      "category": "Mouse",
+      "description": "Blazing light strike optical switch. 4000 DPI adjustable. Programmable side buttons. Ergonomic right-hand design.",
+      "image_url": "https://m.media-amazon.com/images/I/71OcAPCWm+L._AC_SX355_.jpg",
+      "badge": "SALE",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_006",
+      "name": "Rapoo VH510 7.1 Headset",
+      "price": 2900,
+      "category": "Headset",
+      "description": "7.1 virtual surround sound. Retractable noise-canceling microphone. Plush protein leather ear cups. USB powered.",
+      "image_url": "https://m.media-amazon.com/images/I/61I3YbGvOjL._AC_SX355_.jpg",
+      "badge": "",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_007",
+      "name": "SteelSeries QcK Plus Mousepad",
+      "price": 1400,
+      "category": "Mousepad",
+      "description": "450x400mm micro-woven cloth surface. Consistent low-friction glide. Non-slip rubber base.",
+      "image_url": "https://m.media-amazon.com/images/I/71jVm0TBl5L._AC_SX355_.jpg",
+      "badge": "POPULAR",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_008",
+      "name": "Philips 24E1N1300A Monitor",
+      "price": 18500,
+      "category": "Monitor",
+      "description": "23.8-inch FHD IPS panel. 100Hz refresh rate. 4ms response time. HDMI + VGA. Eye comfort certified.",
+      "image_url": "https://m.media-amazon.com/images/I/51s7gj3STWL._AC_SX355_.jpg",
+      "badge": "NEW",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_009",
+      "name": "Anker 7-Port USB 3.0 Hub",
+      "price": 1650,
+      "category": "Accessories",
+      "description": "7 SuperSpeed USB 3.0 ports. 5Gbps data rate. LED indicators. Compact aluminum housing. Bus-powered.",
+      "image_url": "https://m.media-amazon.com/images/I/71pn-bSJXBL._AC_SX355_.jpg",
+      "badge": "",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_010",
+      "name": "Redragon M711 Cobra RGB",
+      "price": 2100,
+      "category": "Mouse",
+      "description": "10000 DPI adjustable. 7 programmable buttons. 16.8M RGB. Braided cable. Weight tuning system.",
+      "image_url": "https://m.media-amazon.com/images/I/61ZVEbJbIZL._AC_SX355_.jpg",
+      "badge": "HOT",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_011",
+      "name": "Aukey KM-G9 Full-Size RGB",
+      "price": 3400,
+      "category": "Keyboard",
+      "description": "Full-size 104-key mechanical. Blue switches. Floating keycap design. Per-key RGB. N-key rollover.",
+      "image_url": "https://m.media-amazon.com/images/I/71n2H5CTJRL._AC_SX355_.jpg",
+      "badge": "",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_012",
+      "name": "Havit RGB XL Desk Mousepad",
+      "price": 1600,
+      "category": "Mousepad",
+      "description": "900x400mm extended desk-size. USB RGB LED edge lighting with 14 modes. Non-slip rubber base.",
+      "image_url": "https://m.media-amazon.com/images/I/71JMp+J73TL._AC_SX355_.jpg",
+      "badge": "TRENDING",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_013",
+      "name": "TP-Link UE300 USB Ethernet",
+      "price": 950,
+      "category": "Accessories",
+      "description": "USB 3.0 to Gigabit Ethernet adapter. 1000Mbps. Plug-and-play. Win/Mac/Linux compatible.",
+      "image_url": "https://m.media-amazon.com/images/I/51Pv+CVSAJL._AC_SX355_.jpg",
+      "badge": "",
+      "stock": "In Stock"
+    },
+    {
+      "id": "prod_014",
+      "name": "Logitech G435 Wireless Headset",
+      "price": 5800,
+      "category": "Headset",
+      "description": "Wireless Bluetooth + 2.4GHz. 18hr battery. 165g lightweight. Built-in dual beam microphones.",
+      "image_url": "https://m.media-amazon.com/images/I/71KPRn44hNL._AC_SX355_.jpg",
+      "badge": "NEW",
+      "stock": "Limited"
+    },
+    {
+      "id": "prod_015",
+      "name": "Baseus 100W Charging Station",
+      "price": 2300,
+      "category": "Accessories",
+      "description": "6-in-1 charging hub. 2x USB-C 100W PD + 4x USB-A. Surge protection. LED power indicator.",
+      "image_url": "https://m.media-amazon.com/images/I/61d8GWtsCeL._AC_SX355_.jpg",
+      "badge": "SALE",
+      "stock": "In Stock"
+    }
+  ]
+}
