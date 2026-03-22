@@ -230,7 +230,7 @@ img{max-width:100%;display:block}
 .pd-action-row{display:flex;gap:10px;flex-wrap:wrap}
 .btn-pd-cart{flex:1;min-width:110px;background:var(--teal);color:#fff;font-weight:700;font-size:13px;padding:12px 16px;border-radius:var(--r6);transition:var(--tr);display:flex;align-items:center;justify-content:center;gap:7px;border:none;cursor:pointer}
 .btn-pd-cart:hover{background:var(--teal-d);transform:translateY(-1px);box-shadow:0 4px 14px rgba(26,185,196,.3)}
-.btn-pd-wa{flex:1;min-width:110px;background:#25D366;color:#fff;font-weight:700;font-size:13px;padding:12px 16px;border-radius:var(--r6);transition:var(--tr);display:flex;align-items:center;justify-content:center;gap:7px;text-decoration:none}
+.btn-pd-wa{flex:1;min-width:110px;background:#25D366;color:#fff;font-weight:700;font-size:13px;padding:12px 16px;border-radius:var(--r6);transition:var(--tr);display:flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;cursor:pointer;border:none;font-family:var(--font)}
 .btn-pd-wa:hover{background:#1ead56;transform:translateY(-1px)}
 
 /* ── CART DRAWER ── */
@@ -449,8 +449,7 @@ footer{background:#1a2535;color:#94a3b8;font-size:13px;margin-top:4px}
     <div class="nav-inner">
       <div class="nav-all">☰ BROWSE ALL CATEGORY</div>
       <span class="nav-link act" onclick="window.scrollTo(0,0)">Home</span>
-      <span class="nav-link" onclick="jumpTo('sec-latest')">Electronics</span>
-      <span class="nav-link" onclick="jumpTo('sec-best')">Best Sellers</span>
+      <span class="nav-link" onclick="jumpTo('sec-products')">All Products</span>
       <span class="nav-link" onclick="jumpTo('sec-cats')">Categories</span>
       <a class="nav-link" href="https://wa.me/8801754007716" target="_blank">Contact</a>
       <a class="nav-link" href="admin.html">Admin</a>
@@ -485,44 +484,17 @@ footer{background:#1a2535;color:#94a3b8;font-size:13px;margin-top:4px}
   </div>
 </div>
 
-<!-- LATEST PRODUCTS -->
-<div class="sec" id="sec-latest">
+<!-- PROMO BANNERS -->
+<div class="promo-row" id="promoBannersRow"></div>
+
+<!-- ALL PRODUCTS -->
+<div class="sec" id="sec-products">
   <div class="sec-head">
-    <div class="sec-title">Latest Products</div>
+    <div class="sec-title">All Products</div>
     <span class="sec-viewall" onclick="openShop()">VIEW ALL PRODUCTS ›</span>
   </div>
   <div class="prod-grid" id="gridLatest"></div>
   <div class="pdots"><div class="pdot act"></div><div class="pdot"></div><div class="pdot"></div></div>
-</div>
-
-<!-- ══════════════════════════════
-     PROMO BANNERS (image-based)
-══════════════════════════════ -->
-<div class="promo-row" id="promoBannersRow"></div>
-
-<!-- BEST SELLERS -->
-<div class="sec" id="sec-best">
-  <div class="sec-head">
-    <div class="sec-title">Best Selling Products</div>
-    <div style="border-bottom:2px solid var(--border)" id="bsTabs">
-      <button class="tab-btn act" onclick="setBestTab('',this)">All</button>
-      <button class="tab-btn" onclick="setBestTab('Keyboard',this)">Keyboards</button>
-      <button class="tab-btn" onclick="setBestTab('Mouse',this)">Mice</button>
-      <button class="tab-btn" onclick="setBestTab('Headset',this)">Headsets</button>
-    </div>
-  </div>
-  <div class="bs-wrap">
-    <div class="bs-feature">
-      <div>
-        <div class="bsf-tag">⭐ Featured Pick</div>
-        <div class="bsf-name">Galaxy Book3<br/>Laptop Pro</div>
-        <div class="bsf-from">From</div>
-        <div class="bsf-price">৳85,000</div>
-        <button class="bsf-btn" onclick="window.open('https://wa.me/8801754007716','_blank')">SHOP NOW →</button>
-      </div>
-    </div>
-    <div class="hscroll" id="gridBest"></div>
-  </div>
 </div>
 
 <!-- CATEGORIES -->
@@ -544,21 +516,6 @@ footer{background:#1a2535;color:#94a3b8;font-size:13px;margin-top:4px}
   <div class="pdots" style="margin-top:16px"><div class="pdot act"></div><div class="pdot"></div><div class="pdot"></div></div>
 </div>
 
-<!-- BOTTOM BANNERS -->
-<div class="bot-row">
-  <div class="bot-banner bb1" onclick="window.open('https://wa.me/8801754007716','_blank')">
-    <div><div class="bb-tag">Smart Watch</div><div class="bb-h">Buy Smart<br/>Watch Now</div><div class="bb-p">From <strong>৳4,500</strong></div><button class="bb-cta">🛒 SHOP NOW</button></div>
-    <div class="bb-emoji">⌚</div>
-  </div>
-  <div class="bot-banner bb2" onclick="window.open('https://wa.me/8801754007716','_blank')">
-    <div><div class="bb-tag">Best OLED</div><div class="bb-h">Best OLED<br/>Display Phone</div><div class="bb-p">From <strong>৳55,000</strong></div><button class="bb-cta">🛒 SHOP NOW</button></div>
-    <div class="bb-emoji">📱</div>
-  </div>
-  <div class="bot-banner bb3" onclick="window.open('https://wa.me/8801754007716','_blank')">
-    <div><div class="bb-tag">Wireless</div><div class="bb-h">Buy AirPods<br/>Max Bluetooth</div><div class="bb-p">From <strong>৳5,200</strong></div><button class="bb-cta">🛒 SHOP NOW</button></div>
-    <div class="bb-emoji">🎧</div>
-  </div>
-</div>
 
 </div><!-- /container -->
 
@@ -717,9 +674,11 @@ function getSlideEmoji(label){
 }
 
 function heroGo(idx, animate){
-  var slides = getSlides();
-  heroIdx = ((idx % slides.length) + slides.length) % slides.length;
   var track = document.getElementById('heroTrack');
+  /* count slides from the rendered DOM, not a stale variable */
+  var slideCount = track ? track.querySelectorAll('.hero-slide').length : 1;
+  if(slideCount < 1) slideCount = 1;
+  heroIdx = ((idx % slideCount) + slideCount) % slideCount;
   if(track){
     if(animate === false) track.style.transition = 'none';
     track.style.transform = 'translateX(-'+heroIdx*100+'%)';
@@ -828,8 +787,8 @@ function openProduct(id){
   var mainImgHTML = imgs.length ? '<img id="pdMainImg" src="'+imgs[0]+'" alt="'+p.name+'" onerror="this.style.display=\'none\'">' : '<div class="pd-main-ph">'+getIcon(p.category)+'</div>';
   var thumbsHTML = imgs.length>1 ? '<div class="pd-thumbs">'+imgs.map(function(url,i){ return '<div class="pd-thumb'+(i===0?' act':'')+'" onclick="switchPdImg(\''+url+'\',this)"><img src="'+url+'" alt="" onerror="this.style.display=\'none\'"></div>'; }).join('')+'</div>' : '';
   document.getElementById('pdImgSide').innerHTML = '<div class="pd-main-img">'+mainImgHTML+'</div>'+thumbsHTML;
-  var waMsg='Hi! I want to order:\n*'+p.name+'* (SKU: '+(p.sku||'N/A')+')\nPrice: '+fmtP(p.price)+'\n\nPlease confirm availability.';
-  var waLink='https://wa.me/8801754007716?text='+encodeURIComponent(waMsg);
+  /* store product id so WA button can read live qty when clicked */
+  document.getElementById('pdOverlay').dataset.pid = p.id;
   document.getElementById('pdInfo').innerHTML =
     '<div class="pd-cat-row"><span class="pd-cat-tag">'+(p.category||'Gadget')+'</span><span class="pd-sku-tag">'+(p.sku||'TZ-000')+'</span><span class="prod-stock-pill '+stockCls(p.stock)+'">'+(p.stock||'In Stock')+'</span></div>'+
     '<div class="pd-name">'+p.name+'</div>'+
@@ -837,7 +796,7 @@ function openProduct(id){
     (p.description?'<div class="pd-desc">'+p.description+'</div>':'')+
     '<div class="pd-price-row"><span class="pd-price">'+fmtP(p.price)+'</span><span class="pd-old-price">'+fmtP(op)+'</span><span class="pd-disc-tag">-'+disc+'% OFF</span></div>'+
     '<div class="qty-row"><span class="qty-label">Quantity:</span><div class="qty-ctrl"><button class="qty-btn" onclick="pdQtyChange(-1)">−</button><input class="qty-num" type="number" id="pdQty" value="1" min="1" max="99" readonly/><button class="qty-btn" onclick="pdQtyChange(1)">+</button></div></div>'+
-    '<div class="pd-action-row"><button class="btn-pd-cart" onclick="pdAddToCart(\''+p.id+'\')">🛒 Add to Cart</button><a class="btn-pd-wa" href="'+waLink+'" target="_blank">💬 Buy via WhatsApp</a></div>';
+    '<div class="pd-action-row"><button class="btn-pd-cart" onclick="pdAddToCart(\''+p.id+'\')">🛒 Add to Cart</button><button class="btn-pd-wa" onclick="pdBuyWA()">💬 Buy via WhatsApp</button></div>';
   document.getElementById('pdOverlay').classList.add('open');
   document.body.style.overflow='hidden';
 }
@@ -845,6 +804,24 @@ function switchPdImg(url,el){ var mi=document.getElementById('pdMainImg'); if(mi
 function closePdModal(e){ if(e&&e.target!==document.getElementById('pdOverlay')) return; document.getElementById('pdOverlay').classList.remove('open'); document.body.style.overflow=''; }
 function pdQtyChange(d){ var inp=document.getElementById('pdQty'); if(!inp) return; inp.value=Math.max(1,Math.min(99,parseInt(inp.value)+d)); }
 function pdAddToCart(id){ var qty=parseInt(document.getElementById('pdQty').value)||1; addToCart(id,qty); document.getElementById('pdOverlay').classList.remove('open'); document.body.style.overflow=''; openCart(); }
+function pdBuyWA(){
+  /* Build WA message dynamically using the LIVE qty value at click time */
+  var pid = document.getElementById('pdOverlay').dataset.pid;
+  var qty = parseInt(document.getElementById('pdQty').value)||1;
+  var products = getProducts();
+  var p = null;
+  for(var i=0;i<products.length;i++){ if(products[i].id===pid){ p=products[i]; break; } }
+  if(!p) return;
+  var subtotal = Number(p.price) * qty;
+  var msg = 'Hi! I want to place an order:\n\n'
+          + '*Product:* ' + p.name + '\n'
+          + '*SKU:* ' + (p.sku||'N/A') + '\n'
+          + '*Unit Price:* ' + fmtP(p.price) + '\n'
+          + '*Quantity:* ' + qty + '\n'
+          + '*Subtotal:* ' + fmtP(subtotal) + '\n\n'
+          + 'Please confirm availability and share delivery details.';
+  window.open('https://wa.me/8801754007716?text='+encodeURIComponent(msg), '_blank');
+}
 
 /* =====================================================
    CART
@@ -862,12 +839,10 @@ function closeCart(){ document.getElementById('cartDrawer').classList.remove('op
 /* =====================================================
    RENDER SECTIONS
 ===================================================== */
-function renderLatest(){ var el=document.getElementById('gridLatest'); var pp=getProducts(); if(!pp.length){ el.innerHTML='<div class="empty-msg"><div class="ei">📦</div><p>No products yet. <a href="admin.html">Add from Admin Panel →</a></p></div>'; return; } el.innerHTML=pp.slice(0,8).map(makeCard).join(''); }
+function renderLatest(){ var el=document.getElementById('gridLatest'); var pp=getProducts(); if(!pp.length){ el.innerHTML='<div class="empty-msg"><div class="ei">📦</div><p>No products yet. <a href="admin.html">Add from Admin Panel →</a></p></div>'; return; } el.innerHTML=pp.map(makeCard).join(''); }
 var bestCat='';
-function setBestTab(cat,btn){ bestCat=cat; document.querySelectorAll('#bsTabs .tab-btn').forEach(function(b){ b.classList.remove('act'); }); btn.classList.add('act'); renderBest(); }
-function renderBest(){ var el=document.getElementById('gridBest'); var pp=getProducts(); if(bestCat) pp=pp.filter(function(p){ return p.category===bestCat; }); if(!pp.length){ el.innerHTML='<div style="padding:24px;color:var(--muted);font-size:13px">No products in this category yet.</div>'; return; } el.innerHTML=pp.slice(0,8).map(makeCard).join(''); }
 function renderCatCounts(){ var pp=getProducts(); var map={Keyboard:'cc-kb',Mouse:'cc-ms',Headset:'cc-hs',Monitor:'cc-mn',Mousepad:'cc-mp',Accessories:'cc-ac'}; Object.keys(map).forEach(function(cat){ var el=document.getElementById(map[cat]); if(el) el.textContent=pp.filter(function(p){ return p.category===cat; }).length+' Items'; }); }
-function renderAll(){ renderLatest(); renderBest(); renderCatCounts(); updateCartUI(); buildHeroSlider(); buildPromoBanners(); }
+function renderAll(){ renderLatest(); renderCatCounts(); updateCartUI(); buildHeroSlider(); buildPromoBanners(); }
 
 /* =====================================================
    SHOP OVERLAY

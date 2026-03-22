@@ -419,6 +419,7 @@ function defaultBanners(){
 
 /* ── IMAGE PREVIEW ── */
 function prevImg(inputId, boxId){ var url=document.getElementById(inputId).value.trim(); var box=document.getElementById(boxId); if(!box) return; if(url){ box.innerHTML='<img src="'+url+'" onerror="this.parentElement.innerHTML=\'❌\'">'; box.classList.add('has-img'); } else { box.innerHTML='🖼️'; box.classList.remove('has-img'); } }
+function prevBannerImg(i){ var url=(document.getElementById('biurl'+i)||{}).value||''; var box=document.getElementById('bprev'+i); if(!box) return; if(url){ box.innerHTML='<img src="'+url+'" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML=\'❌\'">'; } else { box.innerHTML='🖼️'; } }
 function prevSlideImg(){ var url=document.getElementById('sl-img').value.trim(); var box=document.getElementById('sl-prev'); if(!box) return; if(url){ box.innerHTML='<img src="'+url+'" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML=\'❌\'">'; } else { box.innerHTML='🖼️'; } }
 
 /* ── SKU ── */
@@ -543,7 +544,7 @@ function renderBannerEdit(){
         '<label for="bui'+i+'" class="toggle-lbl">Use custom image URL (checked) — or styled text banner (unchecked)</label>'+
       '</div>'+
       '<div id="bimg'+i+'" style="'+(b.use_image?'':'display:none')+'">'+
-        '<div class="form-grp"><label class="form-lbl">Banner Image URL</label><input class="form-inp" id="biurl'+i+'" type="text" value="'+(b.image_url||'')+'" placeholder="https://…image.jpg (1200×360 recommended)"/></div>'+
+        '<div class="form-grp"><label class="form-lbl">Banner Image URL</label><input class="form-inp" id="biurl'+i+'" type="text" value="'+(b.image_url||'')+'" placeholder="https://image.jpg" oninput="prevBannerImg('+i+')"/><div class="img-prev-row"><div class="img-prev-box" id="bprev'+i+'" style="width:140px;height:78px">'+(b.use_image&&b.image_url?'<img src="'+b.image_url+'" style="width:100%;height:100%;object-fit:cover">':'🖼️')+'</div></div></div>'+
       '</div>'+
       '<div class="form-row">'+
         '<div class="form-grp"><label class="form-lbl">Tag</label><input class="form-inp" id="btag'+i+'" type="text" value="'+(b.tag||'')+'" placeholder="e.g. New Arrival"/></div>'+
@@ -557,20 +558,28 @@ function renderBannerEdit(){
         '<div class="form-grp"><label class="form-lbl">Button Text</label><input class="form-inp" id="bbtn'+i+'" type="text" value="'+(b.btn_text||'SHOP NOW')+'" placeholder="SHOP NOW"/></div>'+
         '<div class="form-grp"><label class="form-lbl">Click Link</label><input class="form-inp" id="blnk'+i+'" type="text" value="'+(b.link||'')+'" placeholder="https://wa.me/…"/></div>'+
       '</div>'+
-      (b.use_image?'':'<div class="form-grp"><label class="form-lbl">Banner Style</label><select class="form-inp" id="bsty'+i+'"><option value="dark"'+(b.style==='dark'?' selected':'')+'>Dark (Teal/Navy)</option><option value="light"'+(b.style==='light'?' selected':'')+'>Light (Cream)</option></select></div>')+
+      '<div id="bsty-wrap'+i+'" style="'+(b.use_image?'display:none':'')+'"><div class="form-grp"><label class="form-lbl">Banner Style</label><select class="form-inp" id="bsty'+i+'"><option value="dark"'+(b.style==='dark'?' selected':'')+'>Dark (Teal/Navy)</option><option value="light"'+(b.style==='light'?' selected':'')+'>Light (Cream)</option></select></div></div>'+
       '<button class="btn btn-teal" style="margin-top:6px" onclick="saveBanner('+i+')">💾 Save Banner '+(i+1)+'</button>'+
     '</div>';
   }).join('');
 }
 
-function toggleBannerMode(idx, checked){ var el=document.getElementById('bimg'+idx); if(el) el.style.display=checked?'':'none'; }
+function toggleBannerMode(idx, checked){
+  var imgEl=document.getElementById('bimg'+idx);
+  if(imgEl) imgEl.style.display=checked?'':'none';
+  /* also hide the style selector when using an image */
+  var styWrap=document.getElementById('bsty-wrap'+idx);
+  if(styWrap) styWrap.style.display=checked?'none':'';
+}
 
 function saveBanner(i){
   var banners = getBanners();
   var b = banners[i];
   var useImg = document.getElementById('bui'+i).checked;
   b.use_image = useImg;
-  if(useImg) b.image_url = document.getElementById('biurl'+i).value.trim();
+  /* always read image_url field regardless of toggle state */
+  var biEl = document.getElementById('biurl'+i);
+  b.image_url = biEl ? biEl.value.trim() : (b.image_url||'');
   b.tag  = document.getElementById('btag'+i).value.trim();
   b.title= document.getElementById('btit'+i).value.trim();
   b.sub  = document.getElementById('bsub'+i).value.trim();

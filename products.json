@@ -1,40 +1,11 @@
 {
   "store": "TechZone BD",
-  "exported": "2026-03-22T03:19:39.778Z",
-  "total": 17,
+  "version": "2.3",
+  "exported": "2025-01-01T00:00:00.000Z",
+  "total": 14,
   "products": [
     {
       "id": "prod_001",
-      "name": "Redragon K552 Kumara TKL",
-      "price": 2499,
-      "category": "Keyboard",
-      "description": "Compact tenkeyless mechanical keyboard with Outemu Blue switches and red LED backlight. Durable metal plate construction.",
-      "image_url": "https://m.media-amazon.com/images/I/71bIBSQkBFL._AC_SX355_.jpg",
-      "badge": "HOT",
-      "stock": "In Stock"
-    },
-    {
-      "id": "prod_002",
-      "name": "Logitech G102 Lightsync",
-      "price": 1850,
-      "category": "Mouse",
-      "description": "8000 DPI optical sensor. 6 programmable buttons. 16.8M color RGB. Ambidextrous design. Ultra-light 85g.",
-      "image_url": "https://resource.logitech.com/content/dam/gaming/en/products/g102/g102-gallery-1.png",
-      "badge": "BESTSELLER",
-      "stock": "In Stock"
-    },
-    {
-      "id": "prod_003",
-      "name": "Fantech HG20 RGB Headset",
-      "price": 2200,
-      "category": "Headset",
-      "description": "Surround sound gaming headset. Omnidirectional microphone. Soft memory foam ear cushions. USB + 3.5mm dual mode.",
-      "image_url": "https://m.media-amazon.com/images/I/61mPYsBdmhL._AC_SX355_.jpg",
-      "badge": "NEW",
-      "stock": "In Stock"
-    },
-    {
-      "id": "cmn16uhva1",
       "sku": "TZ-KB-001",
       "name": "Redragon K552 Kumara TKL",
       "price": 2499,
@@ -47,12 +18,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhva2",
+      "id": "prod_002",
       "sku": "TZ-KB-002",
       "name": "Havit HV-KB389L Full RGB Keyboard",
       "price": 3100,
       "category": "Keyboard",
-      "description": "Full-size 104-key mechanical keyboard with Per-key RGB backlight and 20 lighting effects. Low-profile slim switches. Quiet actuation with crisp feedback. Adjustable tilt stand. USB wired.",
+      "description": "Full-size 104-key mechanical keyboard with Per-key RGB backlight and 20 lighting effects. Low-profile slim switches with quiet actuation. Adjustable tilt stand. USB wired. Durable ABS keycaps.",
       "image_url": "https://images.unsplash.com/photo-1614812513172-567d2fe96a75?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1659694899624-86558028bcaf?w=600&q=80&fit=crop",
       "image_url_3": "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&q=80&fit=crop",
@@ -60,12 +31,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb3",
+      "id": "prod_003",
       "sku": "TZ-KB-003",
       "name": "Logitech MK270 Wireless Combo",
       "price": 2800,
       "category": "Keyboard",
-      "description": "Reliable wireless keyboard and mouse combo with 2.4GHz nano receiver. 24-month battery for keyboard, 12-month for mouse. Quiet keys with spill-resistant design. Range up to 10 meters. Plug-and-play.",
+      "description": "Reliable wireless keyboard and mouse combo with 2.4GHz nano receiver. 24-month battery life. Quiet keys with spill-resistant design. Range up to 10 meters. Plug-and-play. Full-size layout.",
       "image_url": "https://images.unsplash.com/photo-1664386516693-7aced5a62ee1?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&q=80&fit=crop",
       "image_url_3": "",
@@ -73,12 +44,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb4",
+      "id": "prod_004",
       "sku": "TZ-MS-001",
       "name": "Logitech G102 Lightsync RGB",
       "price": 1850,
       "category": "Mouse",
-      "description": "Lightweight 85g gaming mouse with 200–8000 DPI optical sensor. 16.8M color LIGHTSYNC RGB. 6 programmable buttons with onboard memory. 32-bit ARM processor. USB 2.0. Compatible with Logitech G HUB software.",
+      "description": "Lightweight 85g gaming mouse with 200–8000 DPI optical sensor. 16.8M color LIGHTSYNC RGB. 6 programmable buttons with onboard memory. 32-bit ARM processor. USB 2.0 wired connection.",
       "image_url": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1625480860249-40e0c97dc1ca?w=600&q=80&fit=crop",
       "image_url_3": "https://images.unsplash.com/photo-1629429408209-1f912961dbd8?w=600&q=80&fit=crop",
@@ -86,12 +57,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb5",
+      "id": "prod_005",
       "sku": "TZ-MS-002",
       "name": "Redragon M711 Cobra RGB Gaming Mouse",
       "price": 2100,
       "category": "Mouse",
-      "description": "10000 DPI laser gaming mouse with adjustable weight tuning system. 7 programmable buttons. 16.8M RGB lighting across 7 independent zones. Durable braided cable. 5 DPI levels. Compatible with all operating systems.",
+      "description": "10000 DPI laser gaming mouse with adjustable weight tuning system. 7 programmable buttons. 16.8M RGB lighting across 7 independent zones. Durable braided cable. 5 DPI levels. Works on all OS.",
       "image_url": "https://images.unsplash.com/photo-1607434906386-65db1e5a8dc2?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?w=600&q=80&fit=crop",
       "image_url_3": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&q=80&fit=crop",
@@ -99,12 +70,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb6",
+      "id": "prod_006",
       "sku": "TZ-MS-003",
       "name": "Logitech G305 LIGHTSPEED Wireless",
       "price": 4200,
       "category": "Mouse",
-      "description": "LIGHTSPEED wireless gaming mouse with HERO 12K sensor for incredible accuracy up to 12000 DPI. Ultra-lightweight 99g. Up to 250 hours battery life on AA. 6 programmable buttons. 1ms report rate.",
+      "description": "LIGHTSPEED wireless gaming mouse with HERO 12K sensor for incredible accuracy up to 12000 DPI. Ultra-lightweight 99g. Up to 250 hours battery life. 6 programmable buttons. 1ms report rate wireless.",
       "image_url": "https://images.unsplash.com/photo-1659025766491-2b5ea9b8ed1a?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?w=600&q=80&fit=crop",
       "image_url_3": "",
@@ -112,7 +83,7 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb7",
+      "id": "prod_007",
       "sku": "TZ-HS-001",
       "name": "Fantech HG20 Fusion 7.1 Headset",
       "price": 2200,
@@ -125,12 +96,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb8",
+      "id": "prod_008",
       "sku": "TZ-HS-002",
       "name": "Logitech G435 LIGHTSPEED Wireless",
       "price": 5800,
       "category": "Headset",
-      "description": "Ultra-lightweight 165g wireless headset with Bluetooth 5.1 and LIGHTSPEED 2.4GHz. 18-hour battery life. Built-in dual beamforming microphones — no boom required. Eco-friendly recycled plastic. Multiplatform compatible.",
+      "description": "Ultra-lightweight 165g wireless headset with Bluetooth 5.1 and LIGHTSPEED 2.4GHz. 18-hour battery life. Built-in dual beamforming microphones. Eco-friendly recycled plastic. Multiplatform compatible.",
       "image_url": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=600&q=80&fit=crop",
       "image_url_3": "",
@@ -138,12 +109,12 @@
       "stock": "Limited"
     },
     {
-      "id": "cmn16uhvb9",
+      "id": "prod_009",
       "sku": "TZ-HS-003",
       "name": "Rapoo VH200 Stereo Gaming Headset",
       "price": 1650,
       "category": "Headset",
-      "description": "Stereo gaming headset with 3.5mm dual plug. 40mm drivers with clear highs and punchy bass. Adjustable soft headband. Flexible noise-canceling boom mic. Tangle-resistant flat cable. Works on PC, PS4, Xbox, Switch.",
+      "description": "Stereo gaming headset with 3.5mm dual plug. 40mm drivers with clear highs and punchy bass. Soft adjustable headband. Flexible noise-canceling boom mic. Tangle-resistant flat cable. Works on PC, PS4, Xbox, Switch.",
       "image_url": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1555664960-8f6c35f5c3ee?w=600&q=80&fit=crop",
       "image_url_3": "",
@@ -151,12 +122,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb10",
+      "id": "prod_010",
       "sku": "TZ-MN-001",
       "name": "Philips 24E1N1300A 100Hz IPS Monitor",
       "price": 18500,
       "category": "Monitor",
-      "description": "23.8-inch Full HD IPS panel with 100Hz refresh rate and ultra-fast 4ms GtG response. HDMI 1.4 + VGA. Eye comfort certified — TÜV flicker-free and LowBlue mode. Ultra-slim 7mm side bezels. Tilt-adjustable stand.",
+      "description": "23.8-inch Full HD IPS panel with 100Hz refresh rate and ultra-fast 4ms GtG response. HDMI 1.4 + VGA inputs. Eye comfort certified — TÜV flicker-free and LowBlue mode. Ultra-slim 7mm side bezels. Tilt-adjustable stand.",
       "image_url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1527443195645-1133f7f28990?w=600&q=80&fit=crop",
       "image_url_3": "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?w=600&q=80&fit=crop",
@@ -164,12 +135,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb11",
+      "id": "prod_011",
       "sku": "TZ-MP-001",
       "name": "Havit MP907 XL RGB Desk Mousepad",
       "price": 1600,
       "category": "Mousepad",
-      "description": "Extended 900x400mm RGB gaming mousepad. USB-powered RGB LED edge lighting with 14 preset modes and adjustable brightness. Premium micro-woven cloth for precision tracking. Anti-slip natural rubber base. Machine washable.",
+      "description": "Extended 900x400mm RGB gaming mousepad. USB-powered RGB LED edge lighting with 14 preset modes. Premium micro-woven cloth surface for precise tracking. Anti-slip natural rubber base. Machine washable surface.",
       "image_url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=600&q=80&fit=crop",
       "image_url_3": "",
@@ -177,12 +148,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb12",
+      "id": "prod_012",
       "sku": "TZ-MP-002",
       "name": "SteelSeries QcK+ Gaming Mousepad",
       "price": 1400,
       "category": "Mousepad",
-      "description": "450x400mm QcK cloth mousepad with micro-woven surface optimized for precise sensor tracking at any speed. Anti-fray stitched edges for long-term durability. Non-slip rubber base. Works with all mice and sensor types.",
+      "description": "450x400mm QcK cloth mousepad with micro-woven surface optimized for precise sensor tracking at any speed. Anti-fray stitched edges for long-term durability. Non-slip rubber base. Compatible with all mice.",
       "image_url": "https://images.unsplash.com/photo-1551029506-0807df4e2031?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&q=80&fit=crop",
       "image_url_3": "",
@@ -190,12 +161,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb13",
+      "id": "prod_013",
       "sku": "TZ-AC-001",
       "name": "Anker 7-Port USB 3.0 Data Hub",
       "price": 1650,
       "category": "Accessories",
-      "description": "7-port SuperSpeed USB 3.0 hub with 5Gbps data transfer. Backward compatible with USB 2.0 and 1.1. Individual LED power indicators. Compact aluminum housing. Bus-powered — no external adapter required. Plug-and-play on Win/Mac/Linux.",
+      "description": "7-port SuperSpeed USB 3.0 hub with 5Gbps data transfer. Backward compatible with USB 2.0 and 1.1. Individual LED power indicators per port. Compact aluminum housing. Bus-powered. Plug-and-play on Win/Mac/Linux.",
       "image_url": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1593640408182-31c228e2d5e5?w=600&q=80&fit=crop",
       "image_url_3": "",
@@ -203,12 +174,12 @@
       "stock": "In Stock"
     },
     {
-      "id": "cmn16uhvb14",
+      "id": "prod_014",
       "sku": "TZ-AC-002",
       "name": "Baseus 65W GaN Fast Charging Hub",
       "price": 2300,
       "category": "Accessories",
-      "description": "6-in-1 GaN desktop charging station. 1x USB-C 65W PD + 1x USB-C 45W + 4x USB-A 22.5W. Smart power distribution. Temperature control circuit. Universal compatibility. LED indicator. Compact foldable plug design.",
+      "description": "6-in-1 GaN desktop charging station. 1x USB-C 65W PD + 1x USB-C 45W + 4x USB-A 22.5W fast charge. Smart power distribution with thermal protection. LED indicator. Universal voltage input. Compact foldable plug.",
       "image_url": "https://images.unsplash.com/photo-1526570207772-784d36084510?w=600&q=80&fit=crop",
       "image_url_2": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=600&q=80&fit=crop",
       "image_url_3": "",
