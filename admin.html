@@ -10,10 +10,10 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --teal:#1ab9c4;--teal-d:#158fa0;--teal-dd:#0d6e7a;--teal-l:#e4f9fb;--teal-ll:#f0fdfe;
-  --white:#fff;--bg:#f5f5f5;--card:#fff;
+  --white:#fff;--bg:#f5f5f5;
   --text:#2d2d2d;--text2:#555;--muted:#888;--light:#bbb;
   --border:#e8e8e8;--border2:#ddd;
-  --green:#10b981;--red:#ef4444;--amber:#f59e0b;
+  --green:#10b981;--red:#ef4444;
   --r4:4px;--r6:6px;--r8:8px;--r12:12px;--rf:9999px;
   --shadow:0 2px 8px rgba(0,0,0,.07);--shadow2:0 4px 16px rgba(0,0,0,.11);
   --tr:.2s ease;--font:"Nunito",sans-serif;
@@ -40,7 +40,7 @@ input,select,textarea{font-family:var(--font);outline:none}
 .fi:focus{border-color:var(--teal);background:#fff;box-shadow:0 0 0 3px rgba(26,185,196,.12)}
 .fi::placeholder{color:var(--light)}
 .mb{margin-bottom:18px}
-.btn-login{width:100%;background:var(--teal);color:#fff;font-weight:800;font-size:14px;padding:13px;border-radius:var(--r6);transition:var(--tr);letter-spacing:.3px}
+.btn-login{width:100%;background:var(--teal);color:#fff;font-weight:800;font-size:14px;padding:13px;border-radius:var(--r6);transition:var(--tr)}
 .btn-login:hover{background:var(--teal-d);transform:translateY(-1px);box-shadow:0 4px 14px rgba(26,185,196,.35)}
 .login-err{background:#fef2f2;border:1.5px solid #fecaca;border-radius:var(--r6);padding:10px 14px;font-size:12.5px;color:#dc2626;margin-bottom:16px;display:none}
 .back-link{display:block;text-align:center;margin-top:16px;font-size:13px;color:var(--muted);cursor:pointer;transition:var(--tr)}
@@ -51,7 +51,7 @@ input,select,textarea{font-family:var(--font);outline:none}
 .adm-wrap{display:flex;min-height:100vh}
 
 /* SIDEBAR */
-.sidebar{width:240px;background:#fff;border-right:1px solid var(--border);display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;box-shadow:var(--shadow)}
+.sidebar{width:242px;background:#fff;border-right:1px solid var(--border);display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0;box-shadow:var(--shadow)}
 .sb-header{padding:18px 16px;border-bottom:1px solid var(--border)}
 .sb-logo{display:flex;align-items:center;gap:8px}
 .sb-logo-icon{width:32px;height:32px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px}
@@ -81,12 +81,10 @@ input,select,textarea{font-family:var(--font);outline:none}
 .adm-content{padding:22px;max-width:1100px}
 @media(max-width:600px){.adm-content{padding:14px}}
 
-/* PAGE HEADER */
+/* COMMON */
 .pg-header{margin-bottom:20px}
 .pg-title{font-size:20px;font-weight:800;color:var(--text)}
 .pg-sub{font-size:13px;color:var(--muted);margin-top:2px}
-
-/* STATS */
 .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-bottom:20px}
 .stat-box{background:#fff;border:1px solid var(--border);border-radius:var(--r8);padding:18px;transition:var(--tr);position:relative;overflow:hidden}
 .stat-box:hover{box-shadow:var(--shadow2);border-color:var(--teal);transform:translateY(-2px)}
@@ -94,10 +92,8 @@ input,select,textarea{font-family:var(--font);outline:none}
 .stat-icon{font-size:28px;margin-bottom:8px}
 .stat-num{font-size:26px;font-weight:800;color:var(--teal)}
 .stat-lbl{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
-
-/* BUTTONS */
 .qa-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
-.btn{font-family:var(--font);font-weight:700;font-size:12.5px;padding:9px 18px;border-radius:var(--r6);transition:var(--tr);cursor:pointer;display:inline-flex;align-items:center;gap:6px;letter-spacing:.2px;border:none}
+.btn{font-family:var(--font);font-weight:700;font-size:12.5px;padding:9px 18px;border-radius:var(--r6);transition:var(--tr);cursor:pointer;display:inline-flex;align-items:center;gap:6px;border:none}
 .btn-teal{background:var(--teal);color:#fff;box-shadow:0 2px 8px rgba(26,185,196,.25)}
 .btn-teal:hover{background:var(--teal-d);transform:translateY(-1px)}
 .btn-outline{background:#fff;border:1.5px solid var(--border2);color:var(--text2)}
@@ -106,27 +102,23 @@ input,select,textarea{font-family:var(--font);outline:none}
 .btn-green:hover{background:#d1fae5}
 .btn-red{background:#fef2f2;border:1.5px solid #fecaca;color:#dc2626}
 .btn-red:hover{background:#fee2e2}
-.btn-amber{background:#fffbeb;border:1.5px solid #fde68a;color:#d97706}
-.btn-amber:hover{background:#fef3c7}
-
-/* CARD */
 .card{background:#fff;border:1px solid var(--border);border-radius:var(--r8);overflow:hidden;box-shadow:var(--shadow);margin-bottom:18px}
 .card-head{background:#fafafa;border-bottom:1px solid var(--border);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .card-title{font-size:13px;font-weight:800;color:var(--text);display:flex;align-items:center;gap:6px}
 .card-title::before{content:"";width:4px;height:14px;background:var(--teal);border-radius:2px;display:inline-block}
-.card-actions{display:flex;gap:8px;flex-wrap:wrap}
-
-/* TABLE */
 .tbl-wrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;min-width:650px}
+table{width:100%;border-collapse:collapse;min-width:600px}
 th{background:#f9fafb;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
 td{padding:11px 14px;font-size:13px;border-bottom:1px solid #f0f0f0;vertical-align:middle}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:#fafcfd}
 .td-badge{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.5px;padding:2px 9px;border-radius:var(--rf);background:var(--teal-l);color:var(--teal-dd);border:1px solid rgba(26,185,196,.25);text-transform:uppercase;font-family:monospace}
-.td-sku{font-family:monospace;font-size:11px;color:var(--muted);background:#f5f5f5;padding:2px 7px;border-radius:var(--r4);border:1px solid var(--border);white-space:nowrap}
-.td-desc{max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text2);font-size:12px}
-.empty-st{text-align:center;padding:48px 20px;color:var(--muted)}
+.td-sku{font-family:monospace;font-size:11px;color:var(--muted);background:#f5f5f5;padding:2px 7px;border-radius:var(--r4);border:1px solid var(--border)}
+.td-desc{max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text2);font-size:12px}
+.td-imgs{display:flex;gap:4px;align-items:center}
+.td-img-box{width:28px;height:28px;border-radius:var(--r4);border:1px solid var(--border);background:#fafafa;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.td-img-box img{width:100%;height:100%;object-fit:contain;padding:2px}
+.empty-st{text-align:center;padding:44px 20px;color:var(--muted)}
 .empty-st .ei{font-size:2.8rem;margin-bottom:12px;opacity:.3}
 
 /* FORM */
@@ -135,30 +127,59 @@ tr:hover td{background:#fafcfd}
 .form-section::before{content:"";width:18px;height:2px;background:var(--teal);border-radius:2px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
-@media(max-width:600px){.form-row,.form-row-3{grid-template-columns:1fr}}
+@media(max-width:640px){.form-row,.form-row-3{grid-template-columns:1fr}}
 .form-grp{margin-bottom:14px}
 .form-lbl{display:block;font-size:11px;font-weight:800;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.form-lbl .opt{font-weight:500;color:var(--light);text-transform:none;letter-spacing:0}
 .form-inp{width:100%;border:1.5px solid var(--border2);border-radius:var(--r6);padding:10px 13px;font-size:13px;color:var(--text);transition:var(--tr);background:#fafafa}
 .form-inp:focus{border-color:var(--teal);background:#fff;box-shadow:0 0 0 3px rgba(26,185,196,.1)}
 .form-inp::placeholder{color:var(--light)}
-.form-inp[readonly]{background:#f0f0f0;color:var(--muted);cursor:default}
 select.form-inp option{background:#fff}
-textarea.form-inp{resize:vertical;min-height:82px;line-height:1.5}
+textarea.form-inp{resize:vertical;min-height:76px;line-height:1.5}
 .sku-row{display:flex;gap:8px;align-items:flex-end}
 .sku-row .form-inp{flex:1}
-.btn-gen-sku{background:var(--teal);color:#fff;font-weight:700;font-size:12px;padding:10px 14px;border-radius:var(--r6);transition:var(--tr);white-space:nowrap;height:40px}
+.btn-gen-sku{background:var(--teal);color:#fff;font-weight:700;font-size:12px;padding:10px 14px;border-radius:var(--r6);white-space:nowrap;height:40px;transition:var(--tr)}
 .btn-gen-sku:hover{background:var(--teal-d)}
+.img-prev-row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.img-prev-box{width:60px;height:60px;border-radius:var(--r6);border:1.5px solid var(--border);background:#fafafa;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.img-prev-box img{width:100%;height:100%;object-fit:contain;padding:4px}
+.img-prev-box.has-img{border-color:var(--teal)}
 .btn-submit{width:100%;background:var(--teal);color:#fff;font-weight:800;font-size:14px;padding:12px;border-radius:var(--r6);transition:var(--tr);margin-top:4px}
 .btn-submit:hover{background:var(--teal-d);transform:translateY(-1px);box-shadow:0 4px 14px rgba(26,185,196,.3)}
 
+/* SLIDER MANAGEMENT */
+.slide-list{display:flex;flex-direction:column;gap:12px}
+.slide-item{background:#fafafa;border:1.5px solid var(--border);border-radius:var(--r8);padding:14px;display:flex;align-items:center;gap:14px;transition:var(--tr)}
+.slide-item:hover{border-color:var(--teal);background:var(--teal-ll)}
+.slide-num{font-family:monospace;font-size:11px;font-weight:700;color:var(--light);background:var(--border);padding:2px 8px;border-radius:var(--r4);flex-shrink:0}
+.slide-thumb{width:90px;height:54px;border-radius:var(--r6);overflow:hidden;background:#e0e0e0;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:1px solid var(--border)}
+.slide-thumb img{width:100%;height:100%;object-fit:cover}
+.slide-info{flex:1;min-width:0}
+.slide-title-text{font-weight:700;font-size:13px;color:var(--text);margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.slide-label-text{font-size:11px;color:var(--muted)}
+.slide-url-text{font-size:10px;color:var(--light);font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.slide-actions{display:flex;gap:6px;flex-shrink:0}
+
+/* BANNER MANAGEMENT */
+.banner-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.banner-list{grid-template-columns:1fr}}
+.banner-item{background:#fafafa;border:1.5px solid var(--border);border-radius:var(--r8);padding:14px;transition:var(--tr)}
+.banner-item:hover{border-color:var(--teal)}
+.banner-preview{height:80px;border-radius:var(--r6);overflow:hidden;margin-bottom:10px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;background:#e0e0e0}
+.banner-preview img{width:100%;height:100%;object-fit:cover}
+.banner-preview.dark-bg{background:linear-gradient(135deg,#1a2535,#2d3f58)}
+.banner-preview.light-bg{background:linear-gradient(135deg,#f5f0e8,#ede4d0)}
+.banner-item-title{font-weight:700;font-size:13px;color:var(--text);margin-bottom:2px}
+.banner-item-sub{font-size:11px;color:var(--muted);margin-bottom:10px}
+
 /* UPLOAD ZONE */
-.upload-zone{border:2px dashed var(--border2);border-radius:var(--r8);padding:44px 24px;text-align:center;cursor:pointer;transition:var(--tr);background:#fafafa;position:relative;margin-bottom:16px}
+.upload-zone{border:2px dashed var(--border2);border-radius:var(--r8);padding:40px 24px;text-align:center;cursor:pointer;transition:var(--tr);background:#fafafa;position:relative;margin-bottom:16px}
 .upload-zone:hover,.upload-zone.drag{border-color:var(--teal);background:var(--teal-ll)}
 .upload-zone input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-.uz-icon{font-size:2.6rem;margin-bottom:10px}
+.uz-icon{font-size:2.5rem;margin-bottom:10px}
 .uz-title{font-size:15px;font-weight:800;color:var(--text);margin-bottom:5px}
 .uz-sub{font-size:12.5px;color:var(--muted)}
-.csv-fmt{background:var(--teal-l);border:1.5px solid rgba(26,185,196,.3);border-radius:var(--r6);padding:14px 16px;font-size:12px;color:var(--teal-dd);line-height:1.75;margin-bottom:16px}
+.csv-fmt{background:var(--teal-l);border:1.5px solid rgba(26,185,196,.3);border-radius:var(--r6);padding:14px 16px;font-size:12px;color:var(--teal-dd);line-height:1.8;margin-bottom:16px}
 .csv-fmt code{background:rgba(26,185,196,.15);padding:1px 6px;border-radius:3px;font-size:11.5px;font-family:monospace}
 .prog-wrap{background:#fff;border:1px solid var(--border);border-radius:var(--r6);padding:16px;margin-bottom:16px;display:none}
 .prog-wrap.show{display:block}
@@ -166,26 +187,6 @@ textarea.form-inp{resize:vertical;min-height:82px;line-height:1.5}
 .prog-bg{background:#eee;border-radius:var(--rf);height:6px;overflow:hidden;margin:8px 0}
 .prog-bar{height:100%;background:var(--teal);border-radius:var(--rf);transition:width .4s ease}
 .prog-sub{font-size:12px;color:var(--muted)}
-
-/* PRODUCT PREVIEW MODAL */
-.preview-ov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:600;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .2s}
-.preview-ov.open{opacity:1;pointer-events:auto}
-.preview-modal{background:#fff;border-radius:var(--r12);max-width:540px;width:100%;max-height:80vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.25);transform:translateY(20px);transition:transform .2s}
-.preview-ov.open .preview-modal{transform:translateY(0)}
-.pm-head{background:#fafafa;border-bottom:1px solid var(--border);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0}
-.pm-title{font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}
-.pm-close{width:30px;height:30px;border-radius:50%;background:var(--border);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;border:none;transition:var(--tr)}
-.pm-close:hover{background:var(--red);color:#fff}
-.pm-body{padding:20px}
-.pm-sku{font-family:monospace;font-size:12px;font-weight:600;color:var(--muted);background:#f5f5f5;padding:3px 10px;border-radius:var(--r4);border:1px solid var(--border);display:inline-block;margin-bottom:10px}
-.pm-name{font-size:17px;font-weight:800;color:var(--text);margin-bottom:6px}
-.pm-cat{font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px}
-.pm-desc{font-size:13px;color:var(--text2);line-height:1.7;background:#fafafa;border-left:3px solid var(--teal);padding:10px 12px;border-radius:var(--r4);margin-bottom:12px}
-.pm-price{font-size:22px;font-weight:800;color:var(--teal);margin-bottom:6px}
-.pm-stock{font-size:12px;font-weight:700;padding:3px 10px;border-radius:var(--rf);display:inline-block}
-.pm-stock.ins{background:#e6f9f1;color:#059669;border:1px solid #a7f3d0}
-.pm-stock.lim{background:#fff7ed;color:#c2410c;border:1px solid #fdba74}
-.pm-stock.oos{background:#fef2f2;color:#dc2626;border:1px solid #fca5a5}
 
 /* TOAST / MODAL */
 .toast{position:fixed;bottom:22px;right:22px;z-index:9999;background:#1a2535;color:#fff;border-radius:var(--r8);padding:12px 18px;display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700;box-shadow:var(--shadow2);transform:translateY(16px) scale(.95);opacity:0;pointer-events:none;transition:all .3s ease}
@@ -203,54 +204,36 @@ textarea.form-inp{resize:vertical;min-height:82px;line-height:1.5}
 .adm-sec{display:none}.adm-sec.act{display:block}
 .fade{animation:fu .35s ease forwards}
 @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.tip{background:var(--teal-l);border:1px solid rgba(26,185,196,.25);border-radius:var(--r6);padding:10px 14px;font-size:12px;color:var(--teal-dd);line-height:1.6;margin-bottom:14px}
+.toggle-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.toggle-lbl{font-size:13px;font-weight:600;color:var(--text2)}
 </style>
 </head>
 <body>
 
 <div class="toast" id="toast"><span id="ti"></span><span id="tm"></span></div>
-<div class="modal-ov" id="modal">
-  <div class="modal">
-    <div class="modal-title" id="mt"></div>
-    <div class="modal-body" id="mb"></div>
-    <div class="modal-acts"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-red" id="mok">Confirm</button></div>
-  </div>
-</div>
-<div class="preview-ov" id="prevOv" onclick="closePrev(event)">
-  <div class="preview-modal" id="prevModal">
-    <div class="pm-head"><span class="pm-title">Product Preview</span><button class="pm-close" onclick="closePrev()">✕</button></div>
-    <div class="pm-body" id="prevBody"></div>
-  </div>
-</div>
+<div class="modal-ov" id="modal"><div class="modal"><div class="modal-title" id="mt"></div><div class="modal-body" id="mb"></div><div class="modal-acts"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-red" id="mok">Confirm</button></div></div></div>
 
-<!-- ========== LOGIN ========== -->
+<!-- LOGIN -->
 <div id="login-pg">
   <div class="login-card">
     <div class="login-logo"><div class="logo-icon">T</div><div class="login-title">Tech<span>Zone</span> BD</div></div>
     <div class="login-sub">Admin Panel — Secure Access Only</div>
     <div class="login-badge">🔐 Administrator Portal</div>
     <div class="login-err" id="lerr">❌ Incorrect password. Please try again.</div>
-    <div class="mb">
-      <label class="fl">Admin Password</label>
-      <input class="fi" type="password" id="lpwd" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')doLogin()"/>
-    </div>
+    <div class="mb"><label class="fl">Admin Password</label><input class="fi" type="password" id="lpwd" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')doLogin()"/></div>
     <button class="btn-login" onclick="doLogin()">🔐 Sign in to Admin Panel</button>
     <a class="back-link" href="index.html">← Back to Store</a>
   </div>
 </div>
 
-<!-- ========== ADMIN ========== -->
+<!-- ADMIN -->
 <div id="admin-pg">
   <div class="adm-overlay" id="adm-ov" onclick="closeSB()"></div>
   <div class="adm-wrap">
-
     <!-- SIDEBAR -->
     <aside class="sidebar" id="sidebar">
-      <div class="sb-header">
-        <div class="sb-logo">
-          <div class="sb-logo-icon">T</div>
-          <div><div class="sb-logo-text">Tech<span>Zone</span> BD</div><div class="sb-ver">Admin Panel v2.0</div></div>
-        </div>
-      </div>
+      <div class="sb-header"><div class="sb-logo"><div class="sb-logo-icon">T</div><div><div class="sb-logo-text">Tech<span>Zone</span> BD</div><div class="sb-ver">Admin Panel v2.2</div></div></div></div>
       <div class="sb-section">
         <span class="sb-lbl">Overview</span>
         <div class="sb-item act" onclick="showSec('dashboard')" id="si-dashboard"><span class="sb-icon">📊</span>Dashboard<span class="sb-count" id="sb-total">0</span></div>
@@ -262,39 +245,33 @@ textarea.form-inp{resize:vertical;min-height:82px;line-height:1.5}
         <div class="sb-item" onclick="showSec('csv')" id="si-csv"><span class="sb-icon">📤</span>CSV Import</div>
       </div>
       <div class="sb-section">
+        <span class="sb-lbl">Storefront</span>
+        <div class="sb-item" onclick="showSec('slider')" id="si-slider"><span class="sb-icon">🎠</span>Hero Slider</div>
+        <div class="sb-item" onclick="showSec('banners')" id="si-banners"><span class="sb-icon">🖼️</span>Promo Banners</div>
+      </div>
+      <div class="sb-section">
         <span class="sb-lbl">Data</span>
         <div class="sb-item" onclick="dlJSON()"><span class="sb-icon">💾</span>Export JSON</div>
         <div class="sb-item" onclick="trigImportJSON()"><span class="sb-icon">📥</span>Import JSON</div>
         <input type="file" id="json-inp" accept=".json" style="display:none" onchange="handleJSON()"/>
       </div>
-      <div class="sb-section">
-        <span class="sb-lbl">Store</span>
-        <div class="sb-item" onclick="window.open('index.html','_blank')"><span class="sb-icon">🏠</span>View Store</div>
-      </div>
-      <div class="sb-bottom">
-        <button class="btn-logout" onclick="doLogout()">🚪 Logout</button>
-      </div>
+      <div class="sb-section"><span class="sb-lbl">Store</span><div class="sb-item" onclick="window.open('index.html','_blank')"><span class="sb-icon">🏠</span>View Store</div></div>
+      <div class="sb-bottom"><button class="btn-logout" onclick="doLogout()">🚪 Logout</button></div>
     </aside>
 
     <!-- MAIN -->
     <main class="adm-main">
       <div class="adm-topbar">
-        <div class="adm-tb-title">
-          <button class="mob-sb-btn" onclick="openSB()">☰</button>
-          ⚡ TechZone BD Admin
-        </div>
-        <div class="adm-tb-right">
-          <button class="adm-tb-btn" onclick="dlJSON()">💾 Export</button>
-          <button class="adm-tb-btn" onclick="showSec('add')">➕ Add Product</button>
-        </div>
+        <div class="adm-tb-title"><button class="mob-sb-btn" onclick="openSB()">☰</button>⚡ TechZone BD Admin</div>
+        <div class="adm-tb-right"><button class="adm-tb-btn" onclick="dlJSON()">💾 Export</button><button class="adm-tb-btn" onclick="showSec('add')">➕ Add Product</button></div>
       </div>
       <div class="adm-content">
 
         <!-- DASHBOARD -->
         <div class="adm-sec act fade" id="sec-dashboard">
-          <div class="pg-header"><div class="pg-title">Dashboard</div><div class="pg-sub">Welcome back! Here's your store overview.</div></div>
+          <div class="pg-header"><div class="pg-title">Dashboard</div><div class="pg-sub">Welcome back! Your store at a glance.</div></div>
           <div class="stats-row">
-            <div class="stat-box"><div class="stat-icon">📦</div><div class="stat-num" id="st-total">0</div><div class="stat-lbl">Total Products</div></div>
+            <div class="stat-box"><div class="stat-icon">📦</div><div class="stat-num" id="st-total">0</div><div class="stat-lbl">Products</div></div>
             <div class="stat-box"><div class="stat-icon">⌨️</div><div class="stat-num" id="st-kb">0</div><div class="stat-lbl">Keyboards</div></div>
             <div class="stat-box"><div class="stat-icon">🖱️</div><div class="stat-num" id="st-ms">0</div><div class="stat-lbl">Mice</div></div>
             <div class="stat-box"><div class="stat-icon">🎧</div><div class="stat-num" id="st-hs">0</div><div class="stat-lbl">Headsets</div></div>
@@ -303,119 +280,106 @@ textarea.form-inp{resize:vertical;min-height:82px;line-height:1.5}
           </div>
           <div class="qa-row">
             <button class="btn btn-teal" onclick="showSec('add')">➕ Add Product</button>
-            <button class="btn btn-teal" onclick="showSec('csv')">📤 Import CSV</button>
+            <button class="btn btn-teal" onclick="showSec('slider')">🎠 Edit Slider</button>
+            <button class="btn btn-teal" onclick="showSec('banners')">🖼️ Edit Banners</button>
             <button class="btn btn-green" onclick="dlJSON()">💾 Export JSON</button>
-            <button class="btn btn-outline" onclick="trigImportJSON()">📥 Import JSON</button>
-            <button class="btn btn-red" onclick="confirmClear()">🗑️ Clear All</button>
+            <button class="btn btn-red" onclick="confirmClear()">🗑️ Clear All Products</button>
           </div>
-          <div class="card">
-            <div class="card-head"><div class="card-title">Recent Products (last 8)</div><button class="btn btn-teal" onclick="showSec('products')">View All</button></div>
-            <div class="tbl-wrap" id="tbl-recent"></div>
-          </div>
+          <div class="card"><div class="card-head"><div class="card-title">Recent Products</div><button class="btn btn-teal" onclick="showSec('products')">View All</button></div><div class="tbl-wrap" id="tbl-recent"></div></div>
         </div>
 
         <!-- ALL PRODUCTS -->
         <div class="adm-sec fade" id="sec-products">
-          <div class="pg-header"><div class="pg-title">All Products</div><div class="pg-sub">Manage your full catalog. Click a row to preview.</div></div>
-          <div class="qa-row">
-            <button class="btn btn-green" onclick="dlJSON()">💾 Export JSON</button>
-            <button class="btn btn-red" onclick="confirmClear()">🗑️ Clear All</button>
-          </div>
-          <div class="card">
-            <div class="card-head">
-              <div class="card-title">Product List (<span id="prod-count">0</span>)</div>
-              <div class="card-actions">
-                <input type="text" id="prodSearch" placeholder="🔍 Search…" style="padding:7px 12px;border:1.5px solid var(--border2);border-radius:var(--r6);font-size:13px;width:180px" oninput="renderAll()"/>
-              </div>
-            </div>
-            <div class="tbl-wrap" id="tbl-all"></div>
-          </div>
+          <div class="pg-header"><div class="pg-title">All Products</div><div class="pg-sub">Manage your full catalog. Click row to preview.</div></div>
+          <div class="qa-row"><button class="btn btn-green" onclick="dlJSON()">💾 Export JSON</button><button class="btn btn-red" onclick="confirmClear()">🗑️ Clear All</button><input type="text" id="prodSearch" placeholder="🔍 Search name, SKU…" style="padding:8px 13px;border:1.5px solid var(--border2);border-radius:var(--r6);font-size:13px;width:200px;font-family:var(--font)" oninput="renderAllProds()"/></div>
+          <div class="card"><div class="card-head"><div class="card-title">Product List (<span id="prod-count">0</span>)</div></div><div class="tbl-wrap" id="tbl-all"></div></div>
         </div>
 
         <!-- ADD PRODUCT -->
         <div class="adm-sec fade" id="sec-add">
-          <div class="pg-header"><div class="pg-title">Add Product</div><div class="pg-sub">Manually add a single product. SKU is auto-generated but can be customised.</div></div>
+          <div class="pg-header"><div class="pg-title">Add Product</div><div class="pg-sub">Add up to 3 images — they auto-slide on hover.</div></div>
           <div class="form-card">
-            <div class="form-section">Product Details</div>
+            <div class="form-section">Basic Info</div>
             <div class="form-row">
-              <div class="form-grp">
-                <label class="form-lbl">Product Name *</label>
-                <input class="form-inp" id="ap-name" type="text" placeholder="e.g. Redragon K552 Mechanical Keyboard" oninput="autoSKU()"/>
-              </div>
-              <div class="form-grp">
-                <label class="form-lbl">Category *</label>
-                <select class="form-inp" id="ap-cat" onchange="autoSKU()">
-                  <option value="">Select Category</option>
-                  <option>Keyboard</option><option>Mouse</option><option>Headset</option>
-                  <option>Monitor</option><option>Mousepad</option><option>Accessories</option>
-                </select>
-              </div>
+              <div class="form-grp"><label class="form-lbl">Product Name *</label><input class="form-inp" id="ap-name" type="text" placeholder="e.g. Redragon K552 Mechanical Keyboard" oninput="autoSKU()"/></div>
+              <div class="form-grp"><label class="form-lbl">Category *</label><select class="form-inp" id="ap-cat" onchange="autoSKU()"><option value="">Select Category</option><option>Keyboard</option><option>Mouse</option><option>Headset</option><option>Monitor</option><option>Mousepad</option><option>Accessories</option></select></div>
             </div>
             <div class="form-row">
-              <div class="form-grp">
-                <label class="form-lbl">Price (BDT) *</label>
-                <input class="form-inp" id="ap-price" type="number" min="0" placeholder="e.g. 2499"/>
-              </div>
-              <div class="form-grp">
-                <label class="form-lbl">Stock Status</label>
-                <select class="form-inp" id="ap-stock">
-                  <option>In Stock</option><option>Limited</option><option>Out of Stock</option>
-                </select>
-              </div>
+              <div class="form-grp"><label class="form-lbl">Price (BDT) *</label><input class="form-inp" id="ap-price" type="number" min="0" placeholder="e.g. 2499"/></div>
+              <div class="form-grp"><label class="form-lbl">Stock Status</label><select class="form-inp" id="ap-stock"><option>In Stock</option><option>Limited</option><option>Out of Stock</option></select></div>
             </div>
-            <div class="form-grp">
-              <label class="form-lbl">SKU (Auto-generated — editable)</label>
-              <div class="sku-row">
-                <input class="form-inp" id="ap-sku" type="text" placeholder="e.g. TZ-KB-001"/>
-                <button class="btn-gen-sku" onclick="autoSKU(true)">⚡ Regenerate</button>
-              </div>
-            </div>
-            <div class="form-grp">
-              <label class="form-lbl">Description</label>
-              <textarea class="form-inp" id="ap-desc" rows="3" placeholder="Describe the product — features, specs, compatibility…"></textarea>
-            </div>
-            <div class="form-row">
-              <div class="form-grp">
-                <label class="form-lbl">Product Image URL</label>
-                <input class="form-inp" id="ap-img" type="text" placeholder="https://example.com/product.jpg (optional)"/>
-              </div>
-              <div class="form-grp">
-                <label class="form-lbl">Badge Label</label>
-                <input class="form-inp" id="ap-badge" type="text" placeholder="HOT, NEW, SALE, BESTSELLER…"/>
-              </div>
-            </div>
-            <button class="btn-submit" onclick="addProd()">➕ Add Product to Store</button>
+            <div class="form-grp"><label class="form-lbl">SKU <span class="opt">(auto-generated)</span></label><div class="sku-row"><input class="form-inp" id="ap-sku" type="text" placeholder="e.g. TZ-KB-001"/><button class="btn-gen-sku" onclick="autoSKU(true)">⚡ Regen</button></div></div>
+            <div class="form-grp"><label class="form-lbl">Description <span class="opt">(shown in popup)</span></label><textarea class="form-inp" id="ap-desc" rows="3" placeholder="Describe features, specs, compatibility…"></textarea></div>
+            <div class="form-grp"><label class="form-lbl">Badge <span class="opt">(HOT, NEW, SALE, BESTSELLER)</span></label><input class="form-inp" id="ap-badge" type="text" placeholder="e.g. HOT"/></div>
           </div>
+          <div class="form-card">
+            <div class="form-section">Product Images (up to 3, hover auto-slides)</div>
+            <div class="form-row-3">
+              <div class="form-grp"><label class="form-lbl">Image 1 URL <span class="opt">(main)</span></label><input class="form-inp" id="ap-img1" type="text" placeholder="https://…" oninput="prevImg('ap-img1','pv1')"/><div class="img-prev-row"><div class="img-prev-box" id="pv1">🖼️</div></div></div>
+              <div class="form-grp"><label class="form-lbl">Image 2 URL</label><input class="form-inp" id="ap-img2" type="text" placeholder="https://…" oninput="prevImg('ap-img2','pv2')"/><div class="img-prev-row"><div class="img-prev-box" id="pv2">🖼️</div></div></div>
+              <div class="form-grp"><label class="form-lbl">Image 3 URL</label><input class="form-inp" id="ap-img3" type="text" placeholder="https://…" oninput="prevImg('ap-img3','pv3')"/><div class="img-prev-row"><div class="img-prev-box" id="pv3">🖼️</div></div></div>
+            </div>
+          </div>
+          <button class="btn-submit" onclick="addProd()">➕ Add Product to Store</button>
         </div>
 
         <!-- CSV IMPORT -->
         <div class="adm-sec fade" id="sec-csv">
-          <div class="pg-header"><div class="pg-title">CSV Import</div><div class="pg-sub">Bulk-upload products. SKUs auto-assigned if not provided.</div></div>
+          <div class="pg-header"><div class="pg-title">CSV Import</div><div class="pg-sub">Bulk-upload products. Supports 3 image columns. SKUs auto-assigned if blank.</div></div>
           <div class="form-card" style="margin-bottom:16px">
-            <div class="form-section">CSV Format</div>
-            <div class="csv-fmt">
-              Required column headers (exact order doesn't matter):<br/>
-              <code>name, price, category, description, image_url, badge, stock, sku</code><br/><br/>
-              Required: <strong>name</strong>, <strong>price</strong>, <strong>category</strong><br/>
-              Optional: description, image_url, badge, stock, sku (auto-generated if blank)<br/><br/>
-              Example:<br/>
-              <code>Logitech G102,1850,Mouse,"8000 DPI RGB mouse",https://img.url/g102.jpg,BESTSELLER,In Stock,TZ-MS-002</code>
+            <div class="form-section">CSV Column Reference</div>
+            <div class="csv-fmt">All columns: <code>name, price, category, description, image_url, image_url_2, image_url_3, badge, stock, sku</code><br/>Required: <strong>name, price, category</strong> — all others optional.</div>
+            <button class="btn btn-green" onclick="dlSample()">📥 Download Sample CSV</button>
+          </div>
+          <div class="upload-zone" id="uz"><input type="file" id="csv-inp" accept=".csv" onchange="handleCSV()"/><div class="uz-icon">📤</div><div class="uz-title">Drag & Drop CSV here</div><div class="uz-sub">or click to browse · .csv only</div></div>
+          <div class="prog-wrap" id="prog"><div class="prog-title" id="prog-t">Processing…</div><div class="prog-bg"><div class="prog-bar" id="prog-b" style="width:0%"></div></div><div class="prog-sub" id="prog-s"></div></div>
+        </div>
+
+        <!-- ══════════════════════════
+             HERO SLIDER MANAGEMENT
+        ══════════════════════════ -->
+        <div class="adm-sec fade" id="sec-slider">
+          <div class="pg-header"><div class="pg-title">Hero Slider</div><div class="pg-sub">Manage the auto-sliding banner at the top of your store. Up to 6 slides.</div></div>
+          <div class="tip">💡 <strong>Tip:</strong> Use landscape images at least 1200×380px for best quality. Free tech stock photos: <strong>unsplash.com</strong> (search "keyboard", "gaming", "tech"). Right-click any image → "Copy image address" and paste the URL below.</div>
+          <div class="card">
+            <div class="card-head"><div class="card-title">Current Slides (<span id="slide-count">0</span> / 6)</div><button class="btn btn-teal" onclick="showSec('add-slide')" id="addSlideBtn">➕ Add Slide</button></div>
+            <div style="padding:16px"><div class="slide-list" id="slideList"></div></div>
+          </div>
+        </div>
+
+        <!-- ADD / EDIT SLIDE -->
+        <div class="adm-sec fade" id="sec-add-slide">
+          <div class="pg-header"><div class="pg-title" id="slideFormTitle">Add Hero Slide</div><div class="pg-sub">Paste a direct image URL for the slide background.</div></div>
+          <div class="form-card">
+            <div class="form-section">Slide Content</div>
+            <input type="hidden" id="slide-edit-id"/>
+            <div class="form-grp">
+              <label class="form-lbl">Slide Image URL *</label>
+              <input class="form-inp" id="sl-img" type="text" placeholder="https://images.unsplash.com/photo-xxx?w=1200&h=400&fit=crop" oninput="prevSlideImg()"/>
+              <div class="img-prev-row"><div class="img-prev-box" id="sl-prev" style="width:160px;height:90px;font-size:2rem">🖼️</div></div>
             </div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap">
-              <button class="btn btn-green" onclick="dlSample()">📥 Download Sample CSV</button>
+            <div class="form-row">
+              <div class="form-grp"><label class="form-lbl">Slide Label <span class="opt">(e.g. "New Arrivals")</span></label><input class="form-inp" id="sl-label" type="text" placeholder="Hot Deal — 40% Off"/></div>
+              <div class="form-grp"><label class="form-lbl">Slide Title <span class="opt">(use \n for new line)</span></label><input class="form-inp" id="sl-title" type="text" placeholder="Premium Mechanical\nKeyboards"/></div>
+            </div>
+            <div class="form-row">
+              <div class="form-grp"><label class="form-lbl">Price / Subtitle <span class="opt">(optional)</span></label><input class="form-inp" id="sl-price" type="text" placeholder="From ৳2,499"/></div>
+              <div class="form-grp"><label class="form-lbl">Click Link <span class="opt">(where slide goes on click)</span></label><input class="form-inp" id="sl-link" type="text" placeholder="https://wa.me/8801754007716" value="https://wa.me/8801754007716"/></div>
             </div>
           </div>
-          <div class="upload-zone" id="uz">
-            <input type="file" id="csv-inp" accept=".csv" onchange="handleCSV()"/>
-            <div class="uz-icon">📤</div>
-            <div class="uz-title">Drag & Drop your CSV file here</div>
-            <div class="uz-sub">or click to browse · .csv files only</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn-submit" style="flex:1;max-width:240px" onclick="saveSlide()">💾 Save Slide</button>
+            <button class="btn btn-outline" onclick="showSec('slider')">Cancel</button>
           </div>
-          <div class="prog-wrap" id="prog">
-            <div class="prog-title" id="prog-t">Processing…</div>
-            <div class="prog-bg"><div class="prog-bar" id="prog-b" style="width:0%"></div></div>
-            <div class="prog-sub" id="prog-s"></div>
-          </div>
+        </div>
+
+        <!-- ══════════════════════════
+             PROMO BANNERS MANAGEMENT
+        ══════════════════════════ -->
+        <div class="adm-sec fade" id="sec-banners">
+          <div class="pg-header"><div class="pg-title">Promo Banners</div><div class="pg-sub">Manage the two promotional banners below the Latest Products section.</div></div>
+          <div class="tip">💡 <strong>Tip:</strong> You can either upload an image URL or use the styled text banner. For images, use 600×180px landscape format. Toggle "Use Image" to switch modes.</div>
+          <div id="bannerEditArea"></div>
         </div>
 
       </div>
@@ -425,305 +389,223 @@ textarea.form-inp{resize:vertical;min-height:82px;line-height:1.5}
 
 <script>
 /* ── STORAGE ── */
-var KEY = 'techzone_products';
-var PASS = 'allahvorosha';
-function gp() { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch(e) { return []; } }
-function sp(a) { localStorage.setItem(KEY, JSON.stringify(a)); }
+var KEY      = 'techzone_products';
+var PASS     = 'allahvorosha';
+var SKEY     = 'techzone_hero_slides';
+var BKEY     = 'techzone_promo_banners';
+function gp(){ try{ return JSON.parse(localStorage.getItem(KEY))||[]; }catch(e){ return []; } }
+function sp(a){ localStorage.setItem(KEY,JSON.stringify(a)); }
+function getSlides(){ try{ return JSON.parse(localStorage.getItem(SKEY))||defaultSlides(); }catch(e){ return defaultSlides(); } }
+function saveSlides(a){ localStorage.setItem(SKEY,JSON.stringify(a)); }
+function getBanners(){ try{ return JSON.parse(localStorage.getItem(BKEY))||defaultBanners(); }catch(e){ return defaultBanners(); } }
+function saveBanners(a){ localStorage.setItem(BKEY,JSON.stringify(a)); }
 
-/* ── SKU GENERATOR ── */
-var CAT_CODE = {Keyboard:'KB', Mouse:'MS', Headset:'HS', Monitor:'MN', Mousepad:'MP', Accessories:'AC'};
-function genSKU(cat) {
-  var code = CAT_CODE[cat] || 'GD';
-  var existing = gp().filter(function(p) { return (p.sku || '').includes('TZ-' + code + '-'); });
-  var max = 0;
-  existing.forEach(function(p) {
-    var n = parseInt((p.sku || '').split('-').pop()) || 0;
-    if (n > max) max = n;
-  });
-  return 'TZ-' + code + '-' + String(max + 1).padStart(3, '0');
+function defaultSlides(){
+  return [
+    { id:'s1', image_url:'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=1200&h=400&fit=crop', label:'New Arrivals', title:'Premium Mechanical\nKeyboards', price:'From ৳2,499', link:'https://wa.me/8801754007716' },
+    { id:'s2', image_url:'https://images.unsplash.com/photo-1527814050087-3793815479db?w=1200&h=400&fit=crop', label:'Best Seller', title:'Pro Gaming\nMice & Pads', price:'From ৳1,400', link:'https://wa.me/8801754007716' },
+    { id:'s3', image_url:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&h=400&fit=crop', label:'Hot Deal — 40% Off', title:'Gaming Headsets\nPremium Sound', price:'From ৳2,200', link:'https://wa.me/8801754007716' },
+    { id:'s4', image_url:'https://images.unsplash.com/photo-1547082299-de196ea013d6?w=1200&h=400&fit=crop', label:'New Stock', title:'Full HD Monitors\n100Hz Display', price:'From ৳18,500', link:'https://wa.me/8801754007716' },
+    { id:'s5', image_url:'https://images.unsplash.com/photo-1593640408182-31c228e2d5e5?w=1200&h=400&fit=crop', label:'Flash Sale', title:'Tech Accessories\nHubs, Cables & More', price:'From ৳950', link:'https://wa.me/8801754007716' },
+    { id:'s6', image_url:'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=1200&h=400&fit=crop', label:'Weekend Offer', title:'Build Your\nDream Setup', price:'Shop Now', link:'https://wa.me/8801754007716' }
+  ];
 }
-function autoSKU(force) {
-  var cat = document.getElementById('ap-cat').value;
-  var skuEl = document.getElementById('ap-sku');
-  if (!skuEl) return;
-  if (force || !skuEl.value || skuEl.value === skuEl.dataset.auto) {
-    var sku = cat ? genSKU(cat) : 'TZ-GD-001';
-    skuEl.value = sku;
-    skuEl.dataset.auto = sku;
-  }
+function defaultBanners(){
+  return [
+    { id:'b1', use_image:false, image_url:'', tag:'Limited Edition', title:'Premium Gaming\nHeadset Pro', sub:'Immersive 7.1 Surround Sound', price_text:'From', price:'৳3,500', btn_text:'SHOP NOW', link:'https://wa.me/8801754007716', style:'dark' },
+    { id:'b2', use_image:false, image_url:'', tag:'New Arrival', title:'Mechanical\nKeyboard RGB', sub:'Per-Key RGB · Blue Switches', price_text:'From', price:'৳2,499', btn_text:'SHOP NOW', link:'https://wa.me/8801754007716', style:'light' }
+  ];
 }
+
+/* ── IMAGE PREVIEW ── */
+function prevImg(inputId, boxId){ var url=document.getElementById(inputId).value.trim(); var box=document.getElementById(boxId); if(!box) return; if(url){ box.innerHTML='<img src="'+url+'" onerror="this.parentElement.innerHTML=\'❌\'">'; box.classList.add('has-img'); } else { box.innerHTML='🖼️'; box.classList.remove('has-img'); } }
+function prevSlideImg(){ var url=document.getElementById('sl-img').value.trim(); var box=document.getElementById('sl-prev'); if(!box) return; if(url){ box.innerHTML='<img src="'+url+'" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML=\'❌\'">'; } else { box.innerHTML='🖼️'; } }
+
+/* ── SKU ── */
+var CAT_CODE={Keyboard:'KB',Mouse:'MS',Headset:'HS',Monitor:'MN',Mousepad:'MP',Accessories:'AC'};
+function genSKU(cat){ var code=CAT_CODE[cat]||'GD'; var existing=gp().filter(function(p){ return (p.sku||'').includes('TZ-'+code+'-'); }); var max=0; existing.forEach(function(p){ var n=parseInt((p.sku||'').split('-').pop())||0; if(n>max) max=n; }); return 'TZ-'+code+'-'+String(max+1).padStart(3,'0'); }
+function autoSKU(force){ var cat=document.getElementById('ap-cat').value; var el=document.getElementById('ap-sku'); if(!el) return; if(force||!el.value||el.value===el.dataset.auto){ var sku=cat?genSKU(cat):'TZ-GD-001'; el.value=sku; el.dataset.auto=sku; } }
 
 /* ── LOGIN ── */
-function doLogin() {
-  var v = document.getElementById('lpwd').value;
-  if (v === PASS) {
-    document.getElementById('lerr').style.display = 'none';
-    document.getElementById('lpwd').value = '';
-    document.getElementById('login-pg').style.display = 'none';
-    document.getElementById('admin-pg').style.display = 'block';
-    refresh();
-  } else {
-    document.getElementById('lerr').style.display = 'block';
-    showToast('❌', 'Incorrect password', 'err');
-  }
-}
-function doLogout() {
-  document.getElementById('admin-pg').style.display = 'none';
-  document.getElementById('login-pg').style.display = 'flex';
-}
+function doLogin(){ var v=document.getElementById('lpwd').value; if(v===PASS){ document.getElementById('lerr').style.display='none'; document.getElementById('lpwd').value=''; document.getElementById('login-pg').style.display='none'; document.getElementById('admin-pg').style.display='block'; refresh(); } else { document.getElementById('lerr').style.display='block'; showToast('❌','Incorrect password','err'); } }
+function doLogout(){ document.getElementById('admin-pg').style.display='none'; document.getElementById('login-pg').style.display='flex'; }
 
 /* ── SECTIONS ── */
-function showSec(id) {
-  document.querySelectorAll('.adm-sec').forEach(function(s) { s.classList.remove('act'); });
-  document.querySelectorAll('.sb-item').forEach(function(s) { s.classList.remove('act'); });
-  document.getElementById('sec-' + id).classList.add('act');
-  var si = document.getElementById('si-' + id);
-  if (si) si.classList.add('act');
-  if (id === 'dashboard') refresh();
-  if (id === 'products') renderAll();
-  if (id === 'add') { autoSKU(); }
-}
-function openSB() { document.getElementById('sidebar').classList.add('open'); document.getElementById('adm-ov').classList.add('open'); }
-function closeSB() { document.getElementById('sidebar').classList.remove('open'); document.getElementById('adm-ov').classList.remove('open'); }
+function showSec(id){ document.querySelectorAll('.adm-sec').forEach(function(s){ s.classList.remove('act'); }); document.querySelectorAll('.sb-item').forEach(function(s){ s.classList.remove('act'); }); document.getElementById('sec-'+id).classList.add('act'); var si=document.getElementById('si-'+id); if(si) si.classList.add('act'); if(id==='dashboard') refresh(); if(id==='products') renderAllProds(); if(id==='add') autoSKU(); if(id==='slider') renderSlideList(); if(id==='banners') renderBannerEdit(); if(id==='add-slide'){ document.getElementById('slideFormTitle').textContent='Add Hero Slide'; document.getElementById('slide-edit-id').value=''; ['sl-img','sl-label','sl-title','sl-price'].forEach(function(i){ document.getElementById(i).value=''; }); document.getElementById('sl-link').value='https://wa.me/8801754007716'; document.getElementById('sl-prev').innerHTML='🖼️'; } }
+function openSB(){ document.getElementById('sidebar').classList.add('open'); document.getElementById('adm-ov').classList.add('open'); }
+function closeSB(){ document.getElementById('sidebar').classList.remove('open'); document.getElementById('adm-ov').classList.remove('open'); }
 
 /* ── STATS ── */
-function refreshStats() {
-  var pp = gp();
-  document.getElementById('st-total').textContent = pp.length;
-  document.getElementById('st-kb').textContent = pp.filter(function(p) { return p.category === 'Keyboard'; }).length;
-  document.getElementById('st-ms').textContent = pp.filter(function(p) { return p.category === 'Mouse'; }).length;
-  document.getElementById('st-hs').textContent = pp.filter(function(p) { return p.category === 'Headset'; }).length;
-  document.getElementById('st-mn').textContent = pp.filter(function(p) { return p.category === 'Monitor'; }).length;
-  document.getElementById('st-ot').textContent = pp.filter(function(p) { return !['Keyboard','Mouse','Headset','Monitor'].includes(p.category); }).length;
-  document.getElementById('sb-total').textContent = pp.length;
-}
-function refresh() { refreshStats(); renderRecent(); }
+function refreshStats(){ var pp=gp(); document.getElementById('st-total').textContent=pp.length; document.getElementById('st-kb').textContent=pp.filter(function(p){ return p.category==='Keyboard'; }).length; document.getElementById('st-ms').textContent=pp.filter(function(p){ return p.category==='Mouse'; }).length; document.getElementById('st-hs').textContent=pp.filter(function(p){ return p.category==='Headset'; }).length; document.getElementById('st-mn').textContent=pp.filter(function(p){ return p.category==='Monitor'; }).length; document.getElementById('st-ot').textContent=pp.filter(function(p){ return !['Keyboard','Mouse','Headset','Monitor'].includes(p.category); }).length; document.getElementById('sb-total').textContent=pp.length; }
+function refresh(){ refreshStats(); renderRecent(); }
 
-/* ── TABLE ── */
-var CI = {Keyboard:'⌨️', Mouse:'🖱️', Headset:'🎧', Monitor:'🖥️', Mousepad:'🟫', Accessories:'🔌'};
-function ico(c) { return CI[c] || '📦'; }
-
-function buildTable(pp) {
-  if (!pp.length) return '<div class="empty-st"><div class="ei">📭</div><p>No products yet.</p></div>';
-  return '<table><thead><tr><th>#</th><th>Image</th><th>SKU</th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Description</th><th>Badge</th><th>Actions</th></tr></thead><tbody>' +
-  pp.map(function(p, i) {
-    var imgCell = p.image_url
-      ? '<img src="' + p.image_url + '" style="width:36px;height:36px;object-fit:contain;border-radius:4px;border:1px solid #eee;background:#fafafa" onerror="this.style.opacity=\'.2\'">'
-      : '<span style="font-size:1.4rem">' + ico(p.category) + '</span>';
-    var stockColor = p.stock === 'In Stock' ? '#059669' : p.stock === 'Limited' ? '#d97706' : '#dc2626';
-    var descShort = (p.description || '—').substring(0, 50) + ((p.description || '').length > 50 ? '…' : '');
-    return '<tr onclick="previewProduct(\'' + p.id + '\')" style="cursor:pointer" title="Click to preview">' +
-      '<td style="color:var(--light);font-size:12px">' + (i + 1) + '</td>' +
-      '<td>' + imgCell + '</td>' +
-      '<td><span class="td-sku">' + (p.sku || '—') + '</span></td>' +
-      '<td style="font-weight:700;color:var(--text);max-width:160px">' + p.name + '</td>' +
-      '<td><span class="td-badge">' + (p.category || '—') + '</span></td>' +
-      '<td style="font-weight:800;color:var(--teal);font-size:13px">৳' + Number(p.price).toLocaleString() + '</td>' +
-      '<td style="font-weight:700;font-size:12px;color:' + stockColor + '">' + (p.stock || 'In Stock') + '</td>' +
-      '<td class="td-desc" title="' + (p.description || '') + '">' + descShort + '</td>' +
-      '<td style="font-size:11px;color:var(--muted)">' + (p.badge || '—') + '</td>' +
-      '<td onclick="event.stopPropagation()"><button class="btn btn-red" style="padding:5px 10px;font-size:11px" onclick="delProd(\'' + p.id + '\')">🗑️</button></td>' +
-    '</tr>';
-  }).join('') +
-  '</tbody></table>';
-}
-
-function renderRecent() {
-  document.getElementById('tbl-recent').innerHTML = buildTable(gp().slice(-8).reverse());
-}
-
-function renderAll() {
-  var pp = gp();
-  var q = (document.getElementById('prodSearch') ? document.getElementById('prodSearch').value : '').toLowerCase();
-  if (q) pp = pp.filter(function(p) { return p.name.toLowerCase().includes(q) || (p.sku || '').toLowerCase().includes(q) || (p.category || '').toLowerCase().includes(q); });
-  document.getElementById('prod-count').textContent = gp().length;
-  document.getElementById('tbl-all').innerHTML = buildTable(pp);
-}
-
-/* ── PRODUCT PREVIEW ── */
-function previewProduct(id) {
-  var products = gp();
-  var p = null;
-  for (var i = 0; i < products.length; i++) { if (products[i].id === id) { p = products[i]; break; } }
-  if (!p) return;
-  var stockCls = p.stock === 'In Stock' ? 'ins' : p.stock === 'Limited' ? 'lim' : 'oos';
-  document.getElementById('prevBody').innerHTML =
-    (p.image_url ? '<img src="' + p.image_url + '" style="width:100%;max-height:180px;object-fit:contain;background:#fafafa;border-radius:8px;margin-bottom:14px" onerror="this.style.display=\'none\'">' : '<div style="font-size:5rem;text-align:center;margin-bottom:14px">' + ico(p.category) + '</div>') +
-    '<div class="pm-sku">' + (p.sku || 'No SKU') + '</div>' +
-    '<div class="pm-cat">' + (p.category || 'Gadget') + '</div>' +
-    '<div class="pm-name">' + p.name + '</div>' +
-    (p.description ? '<div class="pm-desc">' + p.description + '</div>' : '') +
-    '<div class="pm-price">৳' + Number(p.price).toLocaleString() + '</div>' +
-    '<span class="pm-stock ' + stockCls + '">' + (p.stock || 'In Stock') + '</span>' +
-    '<div style="margin-top:16px;display:flex;gap:8px">' +
-      '<button class="btn btn-red" style="flex:1" onclick="delProd(\'' + p.id + '\');closePrev()">🗑️ Delete</button>' +
-      '<button class="btn btn-outline" style="flex:1" onclick="closePrev()">Close</button>' +
-    '</div>';
-  document.getElementById('prevOv').classList.add('open');
-}
-function closePrev(e) {
-  if (e && e.target !== document.getElementById('prevOv')) return;
-  document.getElementById('prevOv').classList.remove('open');
-}
+/* ── PRODUCT TABLE ── */
+var CI={Keyboard:'⌨️',Mouse:'🖱️',Headset:'🎧',Monitor:'🖥️',Mousepad:'🟫',Accessories:'🔌'};
+function ico(c){ return CI[c]||'📦'; }
+function getImgs(p){ var a=[]; if(p.image_url) a.push(p.image_url); if(p.image_url_2) a.push(p.image_url_2); if(p.image_url_3) a.push(p.image_url_3); return a; }
+function buildTable(pp){ if(!pp.length) return '<div class="empty-st"><div class="ei">📭</div><p>No products yet.</p></div>'; return '<table><thead><tr><th>#</th><th>Images</th><th>SKU</th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Desc</th><th>Action</th></tr></thead><tbody>'+pp.map(function(p,i){ var imgs=getImgs(p); var imgCell=imgs.length?'<div class="td-imgs">'+imgs.map(function(url){ return '<div class="td-img-box"><img src="'+url+'" onerror="this.style.display=\'none\'"></div>'; }).join('')+'</div>':'<div class="td-img-box">'+ico(p.category)+'</div>'; var sc=p.stock==='In Stock'?'#059669':p.stock==='Limited'?'#d97706':'#dc2626'; var desc=(p.description||'—').substring(0,40)+((p.description||'').length>40?'…':''); return '<tr><td style="color:var(--light);font-size:12px">'+(i+1)+'</td><td>'+imgCell+'</td><td><span class="td-sku">'+(p.sku||'—')+'</span></td><td style="font-weight:700;color:var(--text);max-width:160px">'+p.name+'</td><td><span class="td-badge">'+(p.category||'—')+'</span></td><td style="font-weight:800;color:var(--teal)">৳'+Number(p.price).toLocaleString()+'</td><td style="font-weight:700;font-size:12px;color:'+sc+'">'+(p.stock||'In Stock')+'</td><td class="td-desc">'+desc+'</td><td><button class="btn btn-red" style="padding:5px 10px;font-size:11px" onclick="delProd(\''+p.id+'\')">🗑️</button></td></tr>'; }).join('')+'</tbody></table>'; }
+function renderRecent(){ document.getElementById('tbl-recent').innerHTML=buildTable(gp().slice(-8).reverse()); }
+function renderAllProds(){ var pp=gp(); var q=(document.getElementById('prodSearch')?document.getElementById('prodSearch').value:'').toLowerCase(); if(q) pp=pp.filter(function(p){ return p.name.toLowerCase().includes(q)||(p.sku||'').toLowerCase().includes(q); }); document.getElementById('prod-count').textContent=gp().length; document.getElementById('tbl-all').innerHTML=buildTable(pp); }
+function delProd(id){ sp(gp().filter(function(p){ return p.id!==id; })); refresh(); renderAllProds(); showToast('🗑️','Product deleted','err'); }
 
 /* ── ADD PRODUCT ── */
-function addProd() {
-  var name  = document.getElementById('ap-name').value.trim();
-  var price = document.getElementById('ap-price').value.trim();
-  var cat   = document.getElementById('ap-cat').value;
-  var sku   = document.getElementById('ap-sku').value.trim();
-  var desc  = document.getElementById('ap-desc').value.trim();
-  var img   = document.getElementById('ap-img').value.trim();
-  var badge = document.getElementById('ap-badge').value.trim();
-  var stock = document.getElementById('ap-stock').value;
+function addProd(){ var name=document.getElementById('ap-name').value.trim(); var price=document.getElementById('ap-price').value.trim(); var cat=document.getElementById('ap-cat').value; if(!name||!price||!cat){ showToast('⚠️','Fill Name, Price & Category','err'); return; } var sku=document.getElementById('ap-sku').value.trim()||genSKU(cat); var p={id:'p'+Date.now().toString(36)+Math.random().toString(36).slice(2,5),sku:sku,name:name,price:parseFloat(price),category:cat,description:document.getElementById('ap-desc').value.trim(),image_url:document.getElementById('ap-img1').value.trim(),image_url_2:document.getElementById('ap-img2').value.trim(),image_url_3:document.getElementById('ap-img3').value.trim(),badge:document.getElementById('ap-badge').value.trim(),stock:document.getElementById('ap-stock').value}; var pp=gp(); pp.push(p); sp(pp); ['ap-name','ap-price','ap-desc','ap-img1','ap-img2','ap-img3','ap-badge'].forEach(function(id){ document.getElementById(id).value=''; }); document.getElementById('ap-cat').value=''; document.getElementById('ap-stock').value='In Stock'; document.getElementById('ap-sku').value=''; ['pv1','pv2','pv3'].forEach(function(id){ var el=document.getElementById(id); if(el){ el.innerHTML='🖼️'; el.classList.remove('has-img'); } }); refreshStats(); showToast('✅','"'+name+'" ('+sku+') added!','suc'); }
 
-  if (!name || !price || !cat) { showToast('⚠️', 'Please fill Name, Price & Category', 'err'); return; }
-  if (!sku) sku = genSKU(cat);
+/* ══════════════════════════════════════
+   HERO SLIDER MANAGEMENT
+══════════════════════════════════════ */
+function renderSlideList(){
+  var slides = getSlides();
+  var el = document.getElementById('slideList');
+  var countEl = document.getElementById('slide-count');
+  var addBtn = document.getElementById('addSlideBtn');
+  if(countEl) countEl.textContent = slides.length;
+  if(addBtn) addBtn.style.display = slides.length >= 6 ? 'none' : '';
 
-  var p = { id: 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2,5), sku: sku, name: name, price: parseFloat(price), category: cat, description: desc, image_url: img, badge: badge, stock: stock };
-  var pp = gp(); pp.push(p); sp(pp);
+  if(!slides.length){ el.innerHTML='<div class="empty-st"><div class="ei">🎠</div><p>No slides yet. Add your first slide!</p></div>'; return; }
 
-  ['ap-name','ap-price','ap-desc','ap-img','ap-badge'].forEach(function(id) { document.getElementById(id).value = ''; });
-  document.getElementById('ap-cat').value = '';
-  document.getElementById('ap-stock').value = 'In Stock';
-  document.getElementById('ap-sku').value = '';
-  refreshStats();
-  showToast('✅', '"' + name + '" (SKU: ' + sku + ') added!', 'suc');
+  el.innerHTML = slides.map(function(s,i){
+    var thumbHTML = s.image_url
+      ? '<div class="slide-thumb"><img src="'+s.image_url+'" alt="" onerror="this.style.display=\'none\'"></div>'
+      : '<div class="slide-thumb">🖼️</div>';
+    var titleLine = (s.title||'').replace('\n',' / ');
+    return '<div class="slide-item">'+
+      '<span class="slide-num">Slide '+(i+1)+'</span>'+
+      thumbHTML+
+      '<div class="slide-info">'+
+        '<div class="slide-title-text">'+(titleLine||'(no title)')+'</div>'+
+        '<div class="slide-label-text">'+(s.label||'')+(s.price?' · '+s.price:'')+'</div>'+
+        '<div class="slide-url-text">'+(s.image_url||'No image URL')+'</div>'+
+      '</div>'+
+      '<div class="slide-actions">'+
+        (i>0?'<button class="btn btn-outline" style="padding:5px 9px;font-size:13px" onclick="moveSlide('+i+',-1)" title="Move up">↑</button>':'')+
+        (i<slides.length-1?'<button class="btn btn-outline" style="padding:5px 9px;font-size:13px" onclick="moveSlide('+i+',1)" title="Move down">↓</button>':'')+
+        '<button class="btn btn-teal" style="padding:5px 10px;font-size:12px" onclick="editSlide(\''+s.id+'\')">✏️ Edit</button>'+
+        '<button class="btn btn-red" style="padding:5px 10px;font-size:12px" onclick="deleteSlide(\''+s.id+'\')">🗑️</button>'+
+      '</div>'+
+    '</div>';
+  }).join('');
 }
 
-/* ── DELETE ── */
-function delProd(id) { sp(gp().filter(function(p) { return p.id !== id; })); refresh(); renderAll(); showToast('🗑️', 'Product deleted', 'err'); }
-
-/* ── CSV IMPORT ── */
-function handleCSV() {
-  var file = document.getElementById('csv-inp').files[0];
-  if (!file) return;
-  if (!file.name.endsWith('.csv')) { showToast('❌', '.csv files only', 'err'); return; }
-  var prog = document.getElementById('prog');
-  var bar  = document.getElementById('prog-b');
-  var pt   = document.getElementById('prog-t');
-  var ps   = document.getElementById('prog-s');
-  prog.classList.add('show'); bar.style.width = '10%'; pt.textContent = 'Reading file…';
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    bar.style.width = '40%'; pt.textContent = 'Parsing CSV…';
-    var lines = e.target.result.split('\n').map(function(l) { return l.trim(); }).filter(Boolean);
-    if (lines.length < 2) { showToast('❌', 'Need header + at least 1 data row', 'err'); prog.classList.remove('show'); return; }
-    var hdrs = parseCSVLine(lines[0]).map(function(h) { return h.trim().toLowerCase().replace(/\s+/g, '_'); });
-    var miss = ['name','price','category'].filter(function(r) { return !hdrs.includes(r); });
-    if (miss.length) { showToast('❌', 'Missing: ' + miss.join(', '), 'err'); prog.classList.remove('show'); return; }
-    bar.style.width = '65%'; pt.textContent = 'Importing products…';
-    var pp = gp(); var added = 0; var skip = 0;
-    for (var i = 1; i < lines.length; i++) {
-      var vals = parseCSVLine(lines[i]);
-      var row = {};
-      hdrs.forEach(function(h, idx) { row[h] = (vals[idx] || '').trim(); });
-      if (!row.name || !row.price || !row.category) { skip++; continue; }
-      var sku = row.sku || genSKU(row.category);
-      pp.push({ id: 'c' + Date.now().toString(36) + i, sku: sku, name: row.name, price: parseFloat(row.price) || 0, category: row.category, description: row.description || row.desc || '', image_url: row.image_url || row.image || '', badge: row.badge || '', stock: row.stock || 'In Stock' });
-      added++;
-    }
-    sp(pp); bar.style.width = '100%'; pt.textContent = 'Done!';
-    ps.textContent = '✅ ' + added + ' products imported  ·  ⚠️ ' + skip + ' rows skipped';
-    showToast('✅', added + ' products imported!', 'suc');
-    refreshStats(); document.getElementById('csv-inp').value = '';
-    setTimeout(function() { prog.classList.remove('show'); bar.style.width = '0%'; }, 5000);
-  };
-  reader.readAsText(file);
+function editSlide(id){
+  var slides = getSlides();
+  var s = slides.find(function(x){ return x.id===id; });
+  if(!s) return;
+  showSec('add-slide');
+  document.getElementById('slideFormTitle').textContent = 'Edit Hero Slide';
+  document.getElementById('slide-edit-id').value = id;
+  document.getElementById('sl-img').value = s.image_url||'';
+  document.getElementById('sl-label').value = s.label||'';
+  document.getElementById('sl-title').value = s.title||'';
+  document.getElementById('sl-price').value = s.price||'';
+  document.getElementById('sl-link').value = s.link||'https://wa.me/8801754007716';
+  prevSlideImg();
 }
-function parseCSVLine(line) {
-  var res = []; var cur = ''; var q = false;
-  for (var i = 0; i < line.length; i++) {
-    var c = line[i];
-    if (c === '"') { q = !q; } else if (c === ',' && !q) { res.push(cur); cur = ''; } else { cur += c; }
+
+function saveSlide(){
+  var imgUrl = document.getElementById('sl-img').value.trim();
+  if(!imgUrl){ showToast('⚠️','Please enter an image URL','err'); return; }
+  var editId = document.getElementById('slide-edit-id').value;
+  var slideData = { id: editId||('s'+Date.now().toString(36)), image_url:imgUrl, label:document.getElementById('sl-label').value.trim(), title:document.getElementById('sl-title').value.trim(), price:document.getElementById('sl-price').value.trim(), link:document.getElementById('sl-link').value.trim()||'https://wa.me/8801754007716' };
+  var slides = getSlides();
+  if(editId){
+    var idx = slides.findIndex(function(x){ return x.id===editId; });
+    if(idx>=0) slides[idx]=slideData;
+  } else {
+    if(slides.length>=6){ showToast('⚠️','Maximum 6 slides allowed','err'); return; }
+    slides.push(slideData);
   }
-  res.push(cur); return res;
+  saveSlides(slides);
+  showToast('✅', editId?'Slide updated!':'Slide added!', 'suc');
+  showSec('slider');
 }
 
-/* ── JSON EXPORT ── */
-function dlJSON() {
-  var pp = gp();
-  var blob = new Blob([JSON.stringify({store:'TechZone BD', exported:new Date().toISOString(), total:pp.length, products:pp}, null, 2)], {type:'application/json'});
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement('a'); a.href = url; a.download = 'techzone_products.json'; a.click(); URL.revokeObjectURL(url);
-  showToast('💾', 'JSON exported!', 'suc');
-}
-/* ── JSON IMPORT ── */
-function trigImportJSON() { document.getElementById('json-inp').click(); }
-function handleJSON() {
-  var file = document.getElementById('json-inp').files[0]; if (!file) return;
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    try {
-      var d = JSON.parse(e.target.result);
-      var pp = Array.isArray(d) ? d : (d.products || []);
-      if (!pp.length) { showToast('❌', 'No products in file', 'err'); return; }
-      openModal('📥 Import JSON', 'Replace ALL existing products with ' + pp.length + ' products from this file?', function() { sp(pp); refresh(); showToast('✅', pp.length + ' products imported!', 'suc'); closeModal(); });
-    } catch(err) { showToast('❌', 'Invalid JSON file', 'err'); }
-    document.getElementById('json-inp').value = '';
-  };
-  reader.readAsText(file);
+function deleteSlide(id){ var slides=getSlides().filter(function(s){ return s.id!==id; }); saveSlides(slides); renderSlideList(); showToast('🗑️','Slide deleted','err'); }
+
+function moveSlide(idx, dir){ var slides=getSlides(); var ni=idx+dir; if(ni<0||ni>=slides.length) return; var tmp=slides[idx]; slides[idx]=slides[ni]; slides[ni]=tmp; saveSlides(slides); renderSlideList(); }
+
+/* ══════════════════════════════════════
+   PROMO BANNERS MANAGEMENT
+══════════════════════════════════════ */
+function renderBannerEdit(){
+  var banners = getBanners();
+  var el = document.getElementById('bannerEditArea');
+  el.innerHTML = banners.map(function(b, i){
+    var useImg = b.use_image ? 'checked' : '';
+    var prevHTML = b.use_image && b.image_url
+      ? '<div class="banner-preview"><img src="'+b.image_url+'" alt="" onerror="this.innerHTML=\'❌\'"></div>'
+      : '<div class="banner-preview '+(b.style==='light'?'light-bg':'dark-bg')+'"><span style="color:'+(b.style==='light'?'var(--teal)':'#fff')+';font-weight:800;font-size:13px">'+(b.title||'').replace('\n',' ')+'</span></div>';
+    return '<div class="form-card">'+
+      '<div class="form-section">Banner '+(i+1)+' <span style="font-weight:500;text-transform:none;font-size:12px;color:var(--muted)"> — ('+b.tag+')</span></div>'+
+      prevHTML+
+      '<div class="toggle-row">'+
+        '<input type="checkbox" id="bui'+i+'" '+useImg+' onchange="toggleBannerMode('+i+',this.checked)" style="width:16px;height:16px;accent-color:var(--teal)">'+
+        '<label for="bui'+i+'" class="toggle-lbl">Use custom image URL (checked) — or styled text banner (unchecked)</label>'+
+      '</div>'+
+      '<div id="bimg'+i+'" style="'+(b.use_image?'':'display:none')+'">'+
+        '<div class="form-grp"><label class="form-lbl">Banner Image URL</label><input class="form-inp" id="biurl'+i+'" type="text" value="'+(b.image_url||'')+'" placeholder="https://…image.jpg (1200×360 recommended)"/></div>'+
+      '</div>'+
+      '<div class="form-row">'+
+        '<div class="form-grp"><label class="form-lbl">Tag</label><input class="form-inp" id="btag'+i+'" type="text" value="'+(b.tag||'')+'" placeholder="e.g. New Arrival"/></div>'+
+        '<div class="form-grp"><label class="form-lbl">Title (\\n = new line)</label><input class="form-inp" id="btit'+i+'" type="text" value="'+(b.title||'')+'" placeholder="Premium Gaming\nHeadset Pro"/></div>'+
+      '</div>'+
+      '<div class="form-row">'+
+        '<div class="form-grp"><label class="form-lbl">Sub-text</label><input class="form-inp" id="bsub'+i+'" type="text" value="'+(b.sub||'')+'" placeholder="Short description"/></div>'+
+        '<div class="form-grp"><label class="form-lbl">Price</label><input class="form-inp" id="bpri'+i+'" type="text" value="'+(b.price||'')+'" placeholder="৳3,500"/></div>'+
+      '</div>'+
+      '<div class="form-row">'+
+        '<div class="form-grp"><label class="form-lbl">Button Text</label><input class="form-inp" id="bbtn'+i+'" type="text" value="'+(b.btn_text||'SHOP NOW')+'" placeholder="SHOP NOW"/></div>'+
+        '<div class="form-grp"><label class="form-lbl">Click Link</label><input class="form-inp" id="blnk'+i+'" type="text" value="'+(b.link||'')+'" placeholder="https://wa.me/…"/></div>'+
+      '</div>'+
+      (b.use_image?'':'<div class="form-grp"><label class="form-lbl">Banner Style</label><select class="form-inp" id="bsty'+i+'"><option value="dark"'+(b.style==='dark'?' selected':'')+'>Dark (Teal/Navy)</option><option value="light"'+(b.style==='light'?' selected':'')+'>Light (Cream)</option></select></div>')+
+      '<button class="btn btn-teal" style="margin-top:6px" onclick="saveBanner('+i+')">💾 Save Banner '+(i+1)+'</button>'+
+    '</div>';
+  }).join('');
 }
 
-/* ── SAMPLE CSV ── */
-function dlSample() {
-  var s = 'name,price,category,description,image_url,badge,stock,sku\n' +
-    'Redragon K552 Kumara TKL,2499,Keyboard,"Compact tenkeyless mechanical keyboard with Outemu Blue switches and red LED backlight",,HOT,In Stock,TZ-KB-001\n' +
-    'Logitech G102 Lightsync,1850,Mouse,"8000 DPI optical sensor. 6 programmable buttons. 16.8M color RGB. Ultra-light 85g",,BESTSELLER,In Stock,TZ-MS-001\n' +
-    'Fantech HG20 RGB Headset,2200,Headset,"Surround sound headset with omnidirectional mic. USB + 3.5mm dual mode",,NEW,In Stock,TZ-HS-001\n' +
-    'SteelSeries QcK Plus Mousepad,1400,Mousepad,"450x400mm cloth surface. Non-slip rubber base",,POPULAR,In Stock,TZ-MP-001\n' +
-    'Anker 7-Port USB 3.0 Hub,1650,Accessories,"USB 3.0 7-port hub. 5Gbps data rate. LED indicators",,,In Stock,TZ-AC-001';
-  var blob = new Blob([s], {type:'text/csv'});
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement('a'); a.href = url; a.download = 'techzone_sample.csv'; a.click(); URL.revokeObjectURL(url);
-  showToast('📥', 'Sample CSV downloaded!', 'suc');
+function toggleBannerMode(idx, checked){ var el=document.getElementById('bimg'+idx); if(el) el.style.display=checked?'':'none'; }
+
+function saveBanner(i){
+  var banners = getBanners();
+  var b = banners[i];
+  var useImg = document.getElementById('bui'+i).checked;
+  b.use_image = useImg;
+  if(useImg) b.image_url = document.getElementById('biurl'+i).value.trim();
+  b.tag  = document.getElementById('btag'+i).value.trim();
+  b.title= document.getElementById('btit'+i).value.trim();
+  b.sub  = document.getElementById('bsub'+i).value.trim();
+  b.price= document.getElementById('bpri'+i).value.trim();
+  b.btn_text = document.getElementById('bbtn'+i).value.trim()||'SHOP NOW';
+  b.link = document.getElementById('blnk'+i).value.trim()||'https://wa.me/8801754007716';
+  var styEl = document.getElementById('bsty'+i);
+  if(styEl) b.style = styEl.value;
+  banners[i] = b;
+  saveBanners(banners);
+  renderBannerEdit();
+  showToast('✅','Banner '+(i+1)+' saved!','suc');
 }
 
-/* ── CLEAR ALL ── */
-function confirmClear() {
-  openModal('⚠️ Clear All Products', 'Permanently delete ALL products? This cannot be undone.', function() { sp([]); refresh(); renderAll(); showToast('🗑️', 'All products deleted', 'err'); closeModal(); });
-}
+/* ── CSV ── */
+function handleCSV(){ var file=document.getElementById('csv-inp').files[0]; if(!file) return; if(!file.name.endsWith('.csv')){ showToast('❌','.csv only','err'); return; } var prog=document.getElementById('prog'); var bar=document.getElementById('prog-b'); var pt=document.getElementById('prog-t'); var ps=document.getElementById('prog-s'); prog.classList.add('show'); bar.style.width='10%'; pt.textContent='Reading…'; var reader=new FileReader(); reader.onload=function(e){ bar.style.width='40%'; pt.textContent='Parsing…'; var lines=e.target.result.split('\n').map(function(l){ return l.trim(); }).filter(Boolean); if(lines.length<2){ showToast('❌','Need header + data','err'); prog.classList.remove('show'); return; } var hdrs=parseCSVLine(lines[0]).map(function(h){ return h.trim().toLowerCase().replace(/\s+/g,'_'); }); var miss=['name','price','category'].filter(function(r){ return !hdrs.includes(r); }); if(miss.length){ showToast('❌','Missing: '+miss.join(', '),'err'); prog.classList.remove('show'); return; } bar.style.width='65%'; pt.textContent='Importing…'; var pp=gp(); var added=0,skip=0; for(var i=1;i<lines.length;i++){ var vals=parseCSVLine(lines[i]); var row={}; hdrs.forEach(function(h,idx){ row[h]=(vals[idx]||'').trim(); }); if(!row.name||!row.price||!row.category){ skip++; continue; } var sku=row.sku||genSKU(row.category); pp.push({id:'c'+Date.now().toString(36)+i,sku:sku,name:row.name,price:parseFloat(row.price)||0,category:row.category,description:row.description||'',image_url:row.image_url||'',image_url_2:row.image_url_2||'',image_url_3:row.image_url_3||'',badge:row.badge||'',stock:row.stock||'In Stock'}); added++; } sp(pp); bar.style.width='100%'; pt.textContent='Done!'; ps.textContent='✅ '+added+' added  ⚠️ '+skip+' skipped'; showToast('✅',added+' products imported!','suc'); refreshStats(); document.getElementById('csv-inp').value=''; setTimeout(function(){ prog.classList.remove('show'); bar.style.width='0%'; },5000); }; reader.readAsText(file); }
+function parseCSVLine(line){ var res=[],cur='',q=false; for(var i=0;i<line.length;i++){ var c=line[i]; if(c==='"'){ q=!q; } else if(c===','&&!q){ res.push(cur); cur=''; } else { cur+=c; } } res.push(cur); return res; }
 
-/* ── MODAL ── */
-function openModal(title, body, onOk) {
-  document.getElementById('mt').textContent = title;
-  document.getElementById('mb').textContent = body;
-  document.getElementById('mok').onclick = onOk;
-  document.getElementById('modal').classList.add('open');
-}
-function closeModal() { document.getElementById('modal').classList.remove('open'); }
+/* ── JSON ── */
+function dlJSON(){ var pp=gp(); var blob=new Blob([JSON.stringify({store:'TechZone BD',exported:new Date().toISOString(),total:pp.length,products:pp},null,2)],{type:'application/json'}); var url=URL.createObjectURL(blob); var a=document.createElement('a'); a.href=url; a.download='techzone_products.json'; a.click(); URL.revokeObjectURL(url); showToast('💾','JSON exported!','suc'); }
+function trigImportJSON(){ document.getElementById('json-inp').click(); }
+function handleJSON(){ var file=document.getElementById('json-inp').files[0]; if(!file) return; var reader=new FileReader(); reader.onload=function(e){ try{ var d=JSON.parse(e.target.result); var pp=Array.isArray(d)?d:(d.products||[]); if(!pp.length){ showToast('❌','No products found','err'); return; } openModal('📥 Import JSON','Replace ALL products with '+pp.length+' products from this file?',function(){ sp(pp); refresh(); showToast('✅',pp.length+' imported!','suc'); closeModal(); }); }catch(err){ showToast('❌','Invalid JSON','err'); } document.getElementById('json-inp').value=''; }; reader.readAsText(file); }
+function dlSample(){ var s='name,price,category,description,image_url,image_url_2,image_url_3,badge,stock,sku\nRedragon K552 TKL,2499,Keyboard,"Tenkeyless. Blue switches.",https://example.com/img1.jpg,https://example.com/img2.jpg,,HOT,In Stock,TZ-KB-001\nLogitech G102,1850,Mouse,"8000 DPI. RGB.",https://example.com/g102.jpg,,,BESTSELLER,In Stock,TZ-MS-001'; var blob=new Blob([s],{type:'text/csv'}); var url=URL.createObjectURL(blob); var a=document.createElement('a'); a.href=url; a.download='techzone_sample.csv'; a.click(); URL.revokeObjectURL(url); showToast('📥','Sample CSV downloaded!','suc'); }
+function confirmClear(){ openModal('⚠️ Clear All','Permanently delete ALL products?',function(){ sp([]); refresh(); renderAllProds(); showToast('🗑️','All deleted','err'); closeModal(); }); }
 
-/* ── TOAST ── */
-var _tt;
-function showToast(icon, msg, type) {
-  var t = document.getElementById('toast');
-  document.getElementById('ti').textContent = icon + ' ';
-  document.getElementById('tm').textContent = msg;
-  t.className = 'toast ' + (type || '') + ' show';
-  clearTimeout(_tt); _tt = setTimeout(function() { t.classList.remove('show'); }, 3200);
-}
+/* ── MODAL / TOAST ── */
+function openModal(t,b,ok){ document.getElementById('mt').textContent=t; document.getElementById('mb').textContent=b; document.getElementById('mok').onclick=ok; document.getElementById('modal').classList.add('open'); }
+function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+var _tt; function showToast(icon,msg,type){ var t=document.getElementById('toast'); document.getElementById('ti').textContent=icon+' '; document.getElementById('tm').textContent=msg; t.className='toast '+(type||'')+' show'; clearTimeout(_tt); _tt=setTimeout(function(){ t.classList.remove('show'); },3200); }
 
-/* ── DRAG/DROP ── */
-var uz = document.getElementById('uz');
-if (uz) {
-  uz.addEventListener('dragover', function(e) { e.preventDefault(); uz.classList.add('drag'); });
-  uz.addEventListener('dragleave', function() { uz.classList.remove('drag'); });
-  uz.addEventListener('drop', function(e) {
-    e.preventDefault(); uz.classList.remove('drag');
-    var f = e.dataTransfer.files[0];
-    if (f) { document.getElementById('csv-inp').files = e.dataTransfer.files; handleCSV(); }
-  });
-}
+/* drag-drop */
+var uz=document.getElementById('uz'); if(uz){ uz.addEventListener('dragover',function(e){ e.preventDefault(); uz.classList.add('drag'); }); uz.addEventListener('dragleave',function(){ uz.classList.remove('drag'); }); uz.addEventListener('drop',function(e){ e.preventDefault(); uz.classList.remove('drag'); var f=e.dataTransfer.files[0]; if(f){ document.getElementById('csv-inp').files=e.dataTransfer.files; handleCSV(); } }); }
 
 /* ── INIT ── */
-async function init() {
-  if (!gp().length) {
-    try {
-      var r = await fetch('products.json');
-      if (r.ok) { var d = await r.json(); if (d.products && d.products.length) sp(d.products); }
-    } catch(e) {}
-  }
-}
+async function init(){ if(!gp().length){ try{ var r=await fetch('products.json'); if(r.ok){ var d=await r.json(); if(d.products&&d.products.length) sp(d.products); } }catch(e){} } }
 init();
 </script>
 </body>
