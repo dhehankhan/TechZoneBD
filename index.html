@@ -620,7 +620,6 @@ function defaultBanners(){
 var CAT_ICONS = {Keyboard:'⌨️',Mouse:'🖱️',Headset:'🎧',Monitor:'🖥️',Mousepad:'🟫',Accessories:'🔌'};
 function getIcon(c){ return CAT_ICONS[c]||'📦'; }
 function getBadgeClass(b){ if(!b) return ''; var l=b.toLowerCase(); if(l==='hot'||l==='trending') return 'b-hot'; if(l==='sale') return 'b-sale'; if(l==='popular') return 'b-pop'; if(l==='bestseller') return 'b-trend'; return 'b-new'; }
-function getStars(n){ return ['★★★★☆','★★★★★','★★★☆☆','★★★★★','★★★★★'][Math.abs(n.charCodeAt(0))%5]; }
 function fmtP(n){ return '৳'+Number(n).toLocaleString(); }
 function oldP(p){ return Math.round(Number(p)*1.28); }
 function stockCls(s){ if(!s||s==='In Stock') return 'in-stock'; if(s==='Limited') return 'limited'; return 'out-stock'; }
