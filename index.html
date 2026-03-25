@@ -790,7 +790,6 @@ function openProduct(id){
   document.getElementById('pdInfo').innerHTML =
     '<div class="pd-cat-row"><span class="pd-cat-tag">'+(p.category||'Gadget')+'</span><span class="pd-sku-tag">'+(p.sku||'TZ-000')+'</span><span class="prod-stock-pill '+stockCls(p.stock)+'">'+(p.stock||'In Stock')+'</span></div>'+
     '<div class="pd-name">'+p.name+'</div>'+
-    '<div class="pd-stars">'+getStars(p.name)+' <span style="font-size:12px;color:var(--muted)">(4.5 / 5)</span></div>'+
     (p.description?'<div class="pd-desc">'+p.description+'</div>':'')+
     '<div class="pd-price-row"><span class="pd-price">'+fmtP(p.price)+'</span><span class="pd-old-price">'+fmtP(op)+'</span><span class="pd-disc-tag">-'+disc+'% OFF</span></div>'+
     '<div class="qty-row"><span class="qty-label">Quantity:</span><div class="qty-ctrl"><button class="qty-btn" onclick="pdQtyChange(-1)">−</button><input class="qty-num" type="number" id="pdQty" value="1" min="1" max="99" readonly/><button class="qty-btn" onclick="pdQtyChange(1)">+</button></div></div>'+
