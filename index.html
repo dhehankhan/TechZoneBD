@@ -764,7 +764,6 @@ function makeCard(p){
       '<div class="prod-brand">'+(p.category||'Gadget')+'</div>'+
       '<div class="prod-name">'+p.name+'</div>'+
       (desc?'<div class="prod-desc-short">'+desc+'</div>':'')+
-      '<div class="prod-stars">'+getStars(p.name)+'</div>'+
       '<div class="prod-price-row"><span class="prod-price">'+fmtP(p.price)+'</span><span class="prod-old">'+fmtP(op)+'</span></div>'+
       '<div class="prod-card-btns">'+
         '<button class="btn-view-detail" onclick="event.stopPropagation();openProduct(\''+p.id+'\')">🔍 Details</button>'+
